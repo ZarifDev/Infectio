@@ -20,8 +20,9 @@ public class MutationCell : MonoBehaviour
     
      [ContextMenu("GetComponents")]
     public void GetMeshFiltersReferences()
-    { slotItenMeshFilter = new MeshFilter[slotIten.Length];
-    slotItenMeshRenderer = new MeshRenderer[slotIten.Length];
+    { 
+        slotItenMeshFilter = new MeshFilter[slotIten.Length];
+        slotItenMeshRenderer = new MeshRenderer[slotIten.Length];
         for (int slotid = 0; slotid < slotIten.Length; slotid++)
         {
        slotItenMeshFilter[slotid] = slotIten[slotid].transform.GetChild(0).gameObject.GetComponent<MeshFilter>();
@@ -32,7 +33,11 @@ public class MutationCell : MonoBehaviour
     {
         
         itens = new ItenDrop.Iten[slotIten.Length];
-        //GenerateItens();
+        if(slotItenMeshFilter.Length<=0)
+        {
+            GetMeshFiltersReferences();
+        }
+        GenerateItens();
     }
     
 
@@ -40,10 +45,7 @@ public class MutationCell : MonoBehaviour
     void Update()
     {
          MoveSelection ();
-         if(Input.GetButtonDown("Fire1"))
-         {
-           GenerateItens(); 
-         }
+       
     }
 
     void GenerateItens()
