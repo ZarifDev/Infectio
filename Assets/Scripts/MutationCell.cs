@@ -9,31 +9,55 @@ public class MutationCell : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] ItenDrop itenDrop;
     
-     ItenDrop.Iten[] itens;
+    ItenDrop.Iten[] itens;
     [SerializeField] GameObject[] slotIten;
+     [SerializeField]  MeshFilter[] slotItenMeshFilter;
+     [SerializeField] MeshRenderer[]  slotItenMeshRenderer;
     [SerializeField] TMP_Text descriptionText;
     [SerializeField] int currentSlotSelectionId;
     [SerializeField] float selectAnimTime = 3;
     [SerializeField]  float selectAnimElapsedTime;
-
+    
+     [ContextMenu("GetComponents")]
+    public void GetMeshFiltersReferences()
+    { slotItenMeshFilter = new MeshFilter[slotIten.Length];
+    slotItenMeshRenderer = new MeshRenderer[slotIten.Length];
+        for (int slotid = 0; slotid < slotIten.Length; slotid++)
+        {
+       slotItenMeshFilter[slotid] = slotIten[slotid].transform.GetChild(0).gameObject.GetComponent<MeshFilter>();
+       slotItenMeshRenderer[slotid] = slotIten[slotid].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>();   
+        }   
+    }
     void Start()
     {
+        
         itens = new ItenDrop.Iten[slotIten.Length];
-        GenerateItens();
+        //GenerateItens();
     }
+    
 
     // Update is called once per frame
     void Update()
     {
          MoveSelection ();
+         if(Input.GetButtonDown("Fire1"))
+         {
+           GenerateItens(); 
+         }
     }
+
     void GenerateItens()
     {
         for (int slotid = 0; slotid < slotIten.Length; slotid++)
         {
                 itens[slotid] = itenDrop.GetItenDroppedRandomily(slotid);
+
+   
+       slotItenMeshFilter[slotid].sharedMesh = itens[slotid].itenIconPrefab.GetComponent<MeshFilter>().sharedMesh;
+       slotItenMeshRenderer[slotid].sharedMaterial = itens[slotid].itenIconPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+                // print(ItenIcon);
              
-        }
+        }   
     }
     void MoveSelection ()
     {

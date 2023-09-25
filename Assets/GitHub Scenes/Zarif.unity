@@ -612,27 +612,27 @@ MonoBehaviour:
     itens:
     - name: A common Iten
       itenObject: {fileID: 0}
-      itenIconPrefab: {fileID: 0}
+      itenIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itenDescription: dsdssss
   - name: TorssoModule
     itens:
     - name: a
       itenObject: {fileID: 0}
-      itenIconPrefab: {fileID: 0}
+      itenIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itenDescription: dddddsss
     - name: d
       itenObject: {fileID: 0}
-      itenIconPrefab: {fileID: 0}
+      itenIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itenDescription: adadadad
   - name: FeetModule
     itens:
     - name: a
       itenObject: {fileID: 0}
-      itenIconPrefab: {fileID: 0}
+      itenIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itenDescription: dddsssaaa
     - name: d
       itenObject: {fileID: 0}
-      itenIconPrefab: {fileID: 0}
+      itenIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itenDescription: ddaagggg
 --- !u!114 &700740351
 MonoBehaviour:
@@ -651,11 +651,18 @@ MonoBehaviour:
   - {fileID: 1988628042}
   - {fileID: 1196783060}
   - {fileID: 551803479}
+  slotItenMeshFilter:
+  - {fileID: 1181348616}
+  - {fileID: 91454231}
+  - {fileID: 1097923278}
+  slotItenMeshRenderer:
+  - {fileID: 1181348615}
+  - {fileID: 91454230}
+  - {fileID: 1097923277}
   descriptionText: {fileID: 2020462351}
   currentSlotSelectionId: 0
-  selectionAnimationTime: 5
-  selectionAnimationElapsedTime: 0
-  selectionAnimationPercentage: 0
+  selectAnimTime: 3
+  selectAnimElapsedTime: 0
 --- !u!1 &935803467
 GameObject:
   m_ObjectHideFlags: 0
