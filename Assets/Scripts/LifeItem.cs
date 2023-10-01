@@ -36,7 +36,8 @@ public class LifeItem : MonoBehaviour
     {
         if (other.CompareTag("Player")) // se o obj colidido estiver com a tag "Player".
         {
-            playerScript.vidaAtual +=lifeRegen;
+            //cura o player acessando o script player e aumenta a vida atual e depois se destroi
+            playerScript.Cura(lifeRegen);
             Destroy(this.gameObject);  // o que acontece se a tag "Player"?
         }
     }

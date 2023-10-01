@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float vidMaxima = 3;
+    public float vidaMaxima = 3;
     public float vidaAtual = 3;
     void Start()
     {
@@ -16,6 +16,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+        
+    }
+    public void Cura(float vidaParaCurar)
+    {
+        //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
+        if(vidaAtual + vidaParaCurar > vidaMaxima){
+        vidaAtual = vidaMaxima;
+        }
     }
     
 }
