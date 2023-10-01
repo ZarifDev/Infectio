@@ -12,7 +12,7 @@ public class ModuloVida : MonoBehaviour
 
     void Start()
     {
-        playerScript.life += lifeRegen;
+        playerScript.vidaAtual = playerScript.vidaAtual + lifeRegen;
     }
 
     // Update is called once per frame

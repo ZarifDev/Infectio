@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float life = 3;
+    public float vidMaxima = 3;
+    public float vidaAtual = 3;
     void Start()
     {
         
