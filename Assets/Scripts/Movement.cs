@@ -18,11 +18,11 @@ public class Movement : MonoBehaviour {
 
         // ROTA��O
 
+
         // MOVIMENTA��O
         Vector3 pos = transform.position;
-
-        Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * PlayerSpeed * Time.deltaTime;
-
+        Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0) * PlayerSpeed * Time.deltaTime;
+        pos += velocity;
 
         //LIMITE PLAYER A CAMERA
 
