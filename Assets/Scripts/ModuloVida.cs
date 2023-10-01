@@ -7,19 +7,19 @@ public class ModuloVida : MonoBehaviour
     public float speed = 5.0f;
     public int lifeRegen;
 
-
+    public Player playerScript;
     // Start is called before the first frame update
 
     void Start()
     {
-
+        playerScript.life += lifeRegen;
     }
 
     // Update is called once per frame
+    /*
     void Update()
     {
-        Vector3 moviment = new Vector3(-1, 0, 0) * speed * Time.deltaTime;    // X, Y, Z o deltaTime FRAME
-        transform.Translate(moviment);
+      
     }
 
 
@@ -36,4 +36,5 @@ public class ModuloVida : MonoBehaviour
             Destroy(this.gameObject);  // o que acontece se a tag "Player"
         }
     }
+    */
 }
