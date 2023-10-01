@@ -16,25 +16,13 @@ public class Movement : MonoBehaviour {
 
     void Update ()  {
 
-        // ROTAÇÂO
+        // ROTAï¿½ï¿½O
 
-        Quaternion rot = transform.rotation;
-
-        float z = rot.eulerAngles.z;
-
-        z -= Input.GetAxis("Horizontal") * RotSpeed * Time.deltaTime;
-
-        rot = Quaternion.Euler( 0, 0, z );
-
-        transform.rotation = rot;
-
-
-        // MOVIMENTAÇÂO
+        // MOVIMENTAï¿½ï¿½O
         Vector3 pos = transform.position;
 
-        Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * MaxSpeed * Time.deltaTime, 0);
+        Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * MaxSpeed * Time.deltaTime;
 
-        pos += rot * velocity;
 
         //LIMITE PLAYER A CAMERA
 
