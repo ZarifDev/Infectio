@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FirstBoss : Boss
 {
-
+/*
     void Start()
     {
-        base.Start();
+        //base.Start();
     }
   void Update()
   {
-        base.Update();
+       // base.Update();
      
   }
+  */
 }
