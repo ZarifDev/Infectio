@@ -8,12 +8,14 @@ public class LifeItem : MonoBehaviour
     public float speed = 5.0f;
     public int lifeRegen;
 
+    Player playerScript;
 
     // Start is called before the first frame update
 
     void Start()
     {
-
+        //quando a vida for spawnada ela vai procurar na cena se tem um objeto chamado player e pegar o script player dele
+        playerScript = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class LifeItem : MonoBehaviour
     {
         if (other.CompareTag("Player")) // se o obj colidido estiver com a tag "Player".
         {
+            playerScript.vidaAtual +=lifeRegen;
             Destroy(this.gameObject);  // o que acontece se a tag "Player"?
         }
     }
