@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstBoss : Boss
+public class FirstBoss : MonoBehaviour
 {
-/*
+
     void Start()
     {
-        //base.Start();
+       
     }
   void Update()
   {
-       // base.Update();
+      
      
   }
-  */
+  
 }

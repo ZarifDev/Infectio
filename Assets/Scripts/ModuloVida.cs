@@ -14,4 +14,5 @@ public class ModuloVida : MonoBehaviour
     {
         playerScript.vidaAtual = playerScript.vidaAtual + lifeRegen;
     }
+
 }

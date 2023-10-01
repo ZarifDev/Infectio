@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour {
     public float PlayerSpeed = 5f;
     public float RotSpeed = 90f;
 
-    float PlayerRadius = 0.5f;
+    public float PlayerRadius = 0.5f;
 
 
     void Start () {
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour {
 
         // MOVIMENTA��O
         Vector3 pos = transform.position;
-        Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0) * PlayerSpeed * Time.deltaTime;
+        Vector3 velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"),0) * PlayerSpeed * Time.deltaTime;
         pos += velocity;
 
         //LIMITE PLAYER A CAMERA

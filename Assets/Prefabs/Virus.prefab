@@ -434,3 +434,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeed: 5
   RotSpeed: 90
+  PlayerRadius: 0
