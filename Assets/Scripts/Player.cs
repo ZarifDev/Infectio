@@ -14,17 +14,17 @@ public class Player : MonoBehaviour
     public GameObject cubo;
     public BoxCollider colisor;
 
+
+
     void Start()
     {
-      
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
+        Slider.value = vidaAtual;
     }
     
     public void Cura(float vidaParaCurar)
@@ -48,10 +48,8 @@ public class Player : MonoBehaviour
         if(algum_objeto.gameObject.tag == "Inimigo")
         {
             vidaAtual = vidaAtual -1;
-            print("col");
+            
         }
-
-
+        }
     }
     
-}
