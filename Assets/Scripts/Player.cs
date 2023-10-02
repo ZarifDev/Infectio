@@ -26,11 +26,21 @@ public class Player : MonoBehaviour
         
         
     }
+    
     public void Cura(float vidaParaCurar)
     {
         //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
         if(vidaAtual + vidaParaCurar > vidaMaxima){
         vidaAtual = vidaMaxima;
+        }
+    }
+    public void  TakeDamage(float QuantidadeDeDano)
+    {
+        if(vidaAtual - QuantidadeDeDano >=0){
+        vidaAtual -= QuantidadeDeDano;
+        }else
+        {
+            vidaAtual = 0;
         }
     }
     private void OnCollisionEnter(Collision algum_objeto) 
