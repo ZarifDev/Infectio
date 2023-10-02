@@ -42,9 +42,6 @@ public class Player : MonoBehaviour
             vidaAtual = vidaAtual -1;
             
         }
-
-
-        
+        }
     }
     
-}

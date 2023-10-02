@@ -7,9 +7,9 @@ using TMPro;
 public class MutationCell : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] ItenDrop itenDrop;
+    [SerializeField] ItemDrop itenDrop;
     
-    ItenDrop.Iten[] itens;
+    ItemDrop.Item[] itens;
     [SerializeField] GameObject[] slotIten;
      [SerializeField]  MeshFilter[] slotItenMeshFilter;
      [SerializeField] MeshRenderer[]  slotItenMeshRenderer;
@@ -32,7 +32,7 @@ public class MutationCell : MonoBehaviour
     void Start()
     {
         
-        itens = new ItenDrop.Iten[slotIten.Length];
+        itens = new ItemDrop.Item[slotIten.Length];
         if(slotItenMeshFilter.Length<=0)
         {
             GetMeshFiltersReferences();
@@ -52,11 +52,11 @@ public class MutationCell : MonoBehaviour
     {
         for (int slotid = 0; slotid < slotIten.Length; slotid++)
         {
-                itens[slotid] = itenDrop.GetItenDroppedRandomily(slotid);
+                itens[slotid] = itenDrop.GetItemDroppedRandomly(slotid);
 
    
-       slotItenMeshFilter[slotid].sharedMesh = itens[slotid].itenIconPrefab.GetComponent<MeshFilter>().sharedMesh;
-       slotItenMeshRenderer[slotid].sharedMaterial = itens[slotid].itenIconPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+       slotItenMeshFilter[slotid].sharedMesh = itens[slotid].itemIconPrefab.GetComponent<MeshFilter>().sharedMesh;
+       slotItenMeshRenderer[slotid].sharedMaterial = itens[slotid].itemIconPrefab.GetComponent<MeshRenderer>().sharedMaterial;
                 // print(ItenIcon);
              
         }   
@@ -80,7 +80,7 @@ public class MutationCell : MonoBehaviour
     void ChangeSelectionProprites()
     {
         currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,slotIten.Length-1);
-        descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itenDescription;
+        descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itemDescription;
        
         
     }

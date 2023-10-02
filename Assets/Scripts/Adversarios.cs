@@ -5,7 +5,7 @@ using UnityEngine;
 public class Adversarios : MonoBehaviour
 {
     public GameObject Tiro;
-    public Transform localDoDisparo;
+    public Transform[] localDoDisparo;
     public float velocidadedoadversario;
 
     public float tempoMaximoEntreOsTiros;
@@ -19,13 +19,10 @@ public class Adversarios : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovimentarAdversario();
+       
         Atirar();
     }
-    private void MovimentarAdversario() 
-    {
-        transform.Translate(Vector3.down * velocidadedoadversario * Time.deltaTime);
-    }
+   
 
     private void Atirar()
     {
@@ -33,8 +30,14 @@ public class Adversarios : MonoBehaviour
 
         if (tempoAtualEntreOsTiros <= 0)
         {
-            Instantiate(Tiro, localDoDisparo.position, Quaternion.Euler(0f, 0f, 90f));
+            for (int i = 0; i < localDoDisparo.Length; i++)
+            {
+                
+            Instantiate(Tiro, localDoDisparo[i].position, localDoDisparo[i].rotation);
             tempoAtualEntreOsTiros = tempoMaximoEntreOsTiros;
+
+            }
+
         }
         else
         {

@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] private Transform[] pontosDoCaminho;
+    [SerializeField] private Vector3[] pontosDoCaminho;
     private int pontoAtual;
 
     [SerializeField] private float velocidadeDeMovimento;
      
-
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +24,8 @@ public class NewBehaviourScript : MonoBehaviour
     }
     private void MovimentarInimigo()
     {
-        transform.position = Vector2.MoveTowards(transform.position, pontosDoCaminho[pontoAtual].position, velocidadeDeMovimento * Time.deltaTime);
-       if (transform.position == pontosDoCaminho[pontoAtual].position)
+        transform.position = Vector2.MoveTowards(transform.position, pontosDoCaminho[pontoAtual], velocidadeDeMovimento * Time.deltaTime);
+       if (transform.position == pontosDoCaminho[pontoAtual])
         {
             pontoAtual += 1;
 
