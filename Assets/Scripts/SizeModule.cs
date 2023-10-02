@@ -11,7 +11,11 @@ public class SizeModule : MonoBehaviour
             this.transform.localScale *= 0.75f;
             Destroy(other.gameObject);
         }
-        // Start is called before the first frame update
+
+    }
+
+   // Start is called before the first frame update
+
         void Start()
     {
         
@@ -22,4 +26,5 @@ public class SizeModule : MonoBehaviour
     {
         
     }
+
 }
