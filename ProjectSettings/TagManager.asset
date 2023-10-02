@@ -10,8 +10,11 @@ TagManager:
   - speedMod
   - sizeMod
   - reloadAcceleratorMod
+=======
+  - BodyModule
+  - FeetModule
+>>>>>>> 3beb874d0770196f89cd8c05ef0c10bf280db7b8
   layers:
-  - Default
   - TransparentFX
   - Ignore Raycast
   - 

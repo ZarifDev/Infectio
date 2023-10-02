@@ -8,7 +8,6 @@ public class MutationCell : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] ItemDrop itenDrop;
-    
     ItemDrop.Item[] itens;
     [SerializeField] GameObject[] slotIten;
      [SerializeField]  MeshFilter[] slotItenMeshFilter;
@@ -17,6 +16,9 @@ public class MutationCell : MonoBehaviour
     [SerializeField] int currentSlotSelectionId;
     [SerializeField] float selectAnimTime = 3;
     [SerializeField]  float selectAnimElapsedTime;
+    [SerializeField] bool HasSelected;
+
+    [SerializeField] GameObject player;
     
      [ContextMenu("GetComponents")]
     public void GetMeshFiltersReferences()
@@ -31,7 +33,7 @@ public class MutationCell : MonoBehaviour
     }
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
         itens = new ItemDrop.Item[slotIten.Length];
         if(slotItenMeshFilter.Length<=0)
         {
@@ -44,7 +46,10 @@ public class MutationCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!HasSelected)
+        {
          MoveSelection ();
+        }
        
     }
 
@@ -75,7 +80,19 @@ public class MutationCell : MonoBehaviour
         selectAnimElapsedTime=0;
         ChangeSelectionProprites();
         }
+        if(Input.GetKeyDown(KeyCode.Space)||Input.GetButtonDown("Fire1"))
+        {
+
+            SelectModule(itens[currentSlotSelectionId]);
+    
+        }
     AnimateSelection();
+    }
+    void SelectModule (ItemDrop.Item item )
+    {
+        Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,Quaternion.identity);
+        slotItenMeshFilter[currentSlotSelectionId].sharedMesh = null;
+        slotItenMeshRenderer[currentSlotSelectionId] = null;
     }
     void ChangeSelectionProprites()
     {
@@ -99,6 +116,14 @@ public class MutationCell : MonoBehaviour
                 slotIten[slotid].transform.localScale= Vector3.Lerp( slotIten[slotid].transform.localScale,Vector3.one*0.21f,selectionAnimationPercentage);    
         }
         }
+        }
+    }
+    
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+
         }
     }
 }
