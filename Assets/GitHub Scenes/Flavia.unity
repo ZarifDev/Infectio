@@ -154,10 +154,10 @@ RectTransform:
   - {fileID: 806671135}
   m_Father: {fileID: 989187981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -6.8984, y: 1.8984}
-  m_SizeDelta: {x: -23.7968, y: -3.7968}
+  m_AnchorMin: {x: 0, y: 0.31300002}
+  m_AnchorMax: {x: 0.93000007, y: 0.75}
+  m_AnchoredPosition: {x: 2.888504, y: 0.40350008}
+  m_SizeDelta: {x: -7.570999, y: -0.8069999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &501998670 stripped
 GameObject:
@@ -213,8 +213,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.7371, y: 0}
-  m_SizeDelta: {x: 19.4743, y: 0}
+  m_AnchoredPosition: {x: -1.2685013, y: 0.0000014305115}
+  m_SizeDelta: {x: 2.537, y: -0.0000038147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806671136
 MonoBehaviour:
@@ -390,8 +390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.0006713867, y: -0.000061035156}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.7823, y: 1.4034}
+  m_SizeDelta: {x: -18.253, y: -2.807}
   m_Pivot: {x: 0.49999997, y: 0.5000003}
 --- !u!114 &938238133
 MonoBehaviour:
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 989187981}
   - component: {fileID: 989187982}
   m_Layer: 5
-  m_Name: BarraDeVida
+  m_Name: z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,8 +628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 191, y: 35.355713}
-  m_SizeDelta: {x: 200, y: 33.2886}
+  m_AnchoredPosition: {x: 186.1, y: 34.1}
+  m_SizeDelta: {x: 200.1698, y: 31.7444}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &989187982
 MonoBehaviour:
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vidaAtual: 3
-  Slider: {fileID: 0}
+  Slider: {fileID: 989187982}
   cubo: {fileID: 0}
   colisor: {fileID: 0}
 --- !u!1 &1528615838
