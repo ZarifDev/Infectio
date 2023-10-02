@@ -14,18 +14,19 @@ public class Player : MonoBehaviour
     public GameObject cubo;
     public BoxCollider colisor;
 
+
+
     void Start()
     {
-      
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
     }
+
+    
     public void Cura(float vidaParaCurar)
     {
         //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
@@ -35,10 +36,13 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter(Collision algum_objeto) 
     {
-        if(algum_objeto.gameObject.tag == "inimigo")
+        if(algum_objeto.gameObject.tag == "Inimigo")
         {
             vidaAtual = vidaAtual -1;
+            
         }
+
+
         
     }
     
