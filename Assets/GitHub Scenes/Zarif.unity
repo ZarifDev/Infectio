@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 312470153}
+    - target: {fileID: 3962505380335578667, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4504792100900350218, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
