@@ -7,13 +7,12 @@ public class Adversarios : MonoBehaviour
     public GameObject Tiro;
     public Transform[] localDoDisparo;
     public float velocidadedoadversario;
-
     public float tempoMaximoEntreOsTiros;
     public float tempoAtualEntreOsTiros;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

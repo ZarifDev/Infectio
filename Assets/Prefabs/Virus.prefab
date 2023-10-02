@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 885231273365661873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 4544807873556415146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91,8 +91,8 @@ Transform:
   m_GameObject: {fileID: 4595361667078289903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64, y: 0.84, z: 1}
+  m_LocalPosition: {x: -0.067, y: 0.0104, z: 0}
+  m_LocalScale: {x: 0.366, y: 0.43721253, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 105398541384610394}
@@ -175,7 +175,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9155051302952088319}
@@ -257,8 +257,8 @@ Transform:
   m_GameObject: {fileID: 5068678601035113071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0786, y: 0, z: 0}
-  m_LocalScale: {x: 0.8427, y: 0.45, z: 1}
+  m_LocalPosition: {x: 0, y: 0.0147, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.2278149, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6031780600583866193}
@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 2706341635465325798}
   - component: {fileID: 1936317546745426817}
   - component: {fileID: -4950018290596156954}
+  - component: {fileID: 106737426206878297}
   m_Layer: 0
   m_Name: Virus
   m_TagString: Player
@@ -434,4 +435,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeed: 5
   RotSpeed: 90
-  PlayerRadius: 0
+  PlayerRadius: 1
+--- !u!54 &106737426206878297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342906730436381684}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
