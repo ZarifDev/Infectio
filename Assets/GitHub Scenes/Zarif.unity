@@ -674,17 +674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a00d677e24aa594db7ea5f3bd9d4eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &700740352 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 567758159636813612, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-  m_PrefabInstance: {fileID: 7578670803227743428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58acc000952d9ce4888c9aa9697e8266, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &935803467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,22 +1061,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 360724080}
-    - target: {fileID: 567758159636813612, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-      propertyPath: itemsModuleList.Array.data[0].items.Array.data[0].name
-      value: Aumento de vida Maxima
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027799849494455244, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027799849494455244, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027799849494455244, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 2027799849494455244, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.45
@@ -1128,10 +1101,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5917936214612906461, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
-      propertyPath: itenDrop
-      value: 
-      objectReference: {fileID: 700740352}
     - target: {fileID: 6038417372866451697, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
       propertyPath: m_Name
       value: MutationCell
