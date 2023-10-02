@@ -21,6 +21,7 @@ public class PlayerShooting : MonoBehaviour {
 		
 
 		reloadSlider.maxValue = reloadTime;
+		currentAmmo = maxAmmo;
 		bulletLayer = gameObject.layer;
 	}
 
