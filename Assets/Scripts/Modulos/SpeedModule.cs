@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpeedModule : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Movement movement;
+     Movement movement;
     public float increaseSpeed = 2;
     
     void Start()

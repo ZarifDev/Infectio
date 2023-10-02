@@ -5,8 +5,8 @@ using UnityEngine;
 public class ModuloVida : MonoBehaviour
 {
     public float speed = 5.0f;
-    public int maxlifeIcrease;
-    public Player playerScript;
+    public int maxlifeIcrease = 5;
+     Player playerScript;
     // Start is called before the first frame update
 
     void Start()

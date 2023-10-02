@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6003874738437231411}
   - component: {fileID: 2654689578597995014}
   - component: {fileID: 1401253208272566728}
+  - component: {fileID: 6322664718598990153}
   m_Layer: 0
   m_Name: sizeMod
-  m_TagString: sizeMod
+  m_TagString: BodyModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,5 +119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674a6cd8036374436a4e86c37cc95d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
   playerSize: 0
+--- !u!114 &6322664718598990153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252605515335492214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b383c00a1e7e7458acf7da4f176955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

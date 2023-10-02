@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1624897507961735818}
   - component: {fileID: 409248066241977943}
   - component: {fileID: -4747744711071637796}
+  - component: {fileID: -4469143936088410127}
   m_Layer: 0
   m_Name: reloadAcceleratorMod
-  m_TagString: reloadAcceleratorMod
+  m_TagString: BodyModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,5 +119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e4da2fd3dc7334ba3ac36111e2d291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 0}
   reloadSpeedIncrease: 2
+--- !u!114 &-4469143936088410127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376230180805813561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b383c00a1e7e7458acf7da4f176955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

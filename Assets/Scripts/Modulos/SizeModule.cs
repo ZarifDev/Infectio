@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SizeModule : MonoBehaviour
 {
-    public Transform playerTransform;
-    public float playerSize;
+    Transform playerTransform;
+    public float playerSize = 0.75f;
 
    // Start is called before the first frame update
 

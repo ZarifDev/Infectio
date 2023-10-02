@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FastReloadModule : MonoBehaviour
 {
-    public Player playerScript;
+     Player playerScript;
     public float reloadSpeedIncrease = 2;
     
     void Start()
