@@ -856,7 +856,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.39, y: 1.74, z: 1}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8423441933111781448}
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba73a41b16389db47a2444feb5f20ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itenDrop: {fileID: 0}
+  itenDrop: {fileID: 567758159636813612}
   slotIten:
   - {fileID: 7516805548082206975}
   - {fileID: 8654555336643590709}
@@ -965,6 +965,8 @@ MonoBehaviour:
   currentSlotSelectionId: 0
   selectAnimTime: 3
   selectAnimElapsedTime: 0
+  canSelectModules: 0
+  player: {fileID: 0}
 --- !u!114 &567758159636813612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,9 +982,9 @@ MonoBehaviour:
   itemsModuleList:
   - name: ModulosDeVida
     items:
-    - name: dsada
-      itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
+    - name: Aumento de vida Maxima
+      itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
+      itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemDescription: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
     - name: agdgdg
       itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}

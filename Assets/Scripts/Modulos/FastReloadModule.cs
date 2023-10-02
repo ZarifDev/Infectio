@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class FastReloadModule : MonoBehaviour
 {
-     Player playerScript;
+    Player playerScript;
     public float reloadSpeedIncrease = 2;
-    
+    float defaultReloadSpeed;
     void Start()
     {
         
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerScript.velocidadeDeRecarga = reloadSpeedIncrease;
 
  
     }
@@ -20,5 +19,6 @@ public class FastReloadModule : MonoBehaviour
     void Update()
     {
         
+       playerScript.velocidadeDeRecargaAtual =  playerScript.velocidadeDeRecargaDaArma + reloadSpeedIncrease;
     }
 }

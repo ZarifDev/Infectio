@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     public float vidaMaxima = 3; 
     public float vidaAtual = 3;
 
-    public float velocidadeDeRecarga;
+    public float velocidadeDeRecargaDaArma;
+    public float velocidadeDeRecargaAtual;
 
     public Slider Slider;
     public GameObject cubo;

@@ -531,19 +531,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4628455054120324420, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1493843427}
-    - targetCorrespondingSourceObject: {fileID: 4628455054120324420, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1493843428}
-    - targetCorrespondingSourceObject: {fileID: 5068678601035113071, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1935492105}
-    - targetCorrespondingSourceObject: {fileID: 5068678601035113071, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1935492104}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
 --- !u!1 &585310610
 GameObject:
@@ -871,66 +859,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278581584}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1493843423 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4628455054120324420, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-  m_PrefabInstance: {fileID: 500772297}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1493843427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493843423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 674a6cd8036374436a4e86c37cc95d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSize: 0
---- !u!114 &1493843428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493843423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b383c00a1e7e7458acf7da4f176955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1935492100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5068678601035113071, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
-  m_PrefabInstance: {fileID: 500772297}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1935492104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935492100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a005925aaf4cbec4d847257f640c6013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1935492105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935492100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b172e781492e2a8458824d95e0b53a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increaseSpeed: 2
 --- !u!1 &1951023492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 360724080}
+    - target: {fileID: 567758159636813612, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
+      propertyPath: itemsModuleList.Array.data[0].items.Array.data[0].name
+      value: Aumento de vida Maxima
+      objectReference: {fileID: 0}
     - target: {fileID: 2027799849494455244, guid: 51a3b777b0cc9ab438a35499b3b5cd84, type: 3}
       propertyPath: m_LocalScale.x
       value: 9
