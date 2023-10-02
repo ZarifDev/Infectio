@@ -35,11 +35,13 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter(Collision algum_objeto) 
     {
-        if(algum_objeto.gameObject.tag == "inimigo")
+        if(algum_objeto.gameObject.tag == "Inimigo")
         {
             vidaAtual = vidaAtual -1;
+            print("col");
         }
-        
+
+
     }
     
 }
