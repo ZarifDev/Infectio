@@ -5,9 +5,11 @@ using UnityEngine;
 public class LifeDropModule : MonoBehaviour
 {
     // Start is called before the first frame update
+ 
     void Start()
     {
         InimigoBase.chanceDeDroparVida = true;
+
     }
 
     // Update is called once per frame

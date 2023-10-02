@@ -7,11 +7,16 @@ public class PlayerShooting : MonoBehaviour {
 
 	public GameObject bulletPrefab;
 	int bulletLayer;
-
+	public float maxAmmo = 30;
+	public float currentAmmo;
+	public float reloadTime = 2f;
+	float reloadCooldownTimer;
+	public bool isReloading;
 	public float fireDelay = 0.25f;
 	float cooldownTimer = 0;
 
 	void Start() {
+		reloadCooldownTimer = reloadTime;
 		bulletLayer = gameObject.layer;
 	}
 
@@ -19,14 +24,30 @@ public class PlayerShooting : MonoBehaviour {
 	void Update () {
 		cooldownTimer -= Time.deltaTime;
 
-		if( Input.GetButton("Fire1") && cooldownTimer <= 0 ) {
+		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0) {
 			// SHOOT!
 			cooldownTimer = fireDelay;
 
 			Vector3 offset = transform.rotation * bulletOffset;
 
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
+			currentAmmo --;
 			bulletGO.layer = bulletLayer;
+		}
+		
+		if(currentAmmo <=0 || Input.GetButtonDown("Fire2"))
+		{
+		ReloadGun();
+		}
+	}
+	void ReloadGun()
+	{
+		reloadCooldownTimer -= Time.deltaTime;
+		if(reloadCooldownTimer <= 0 )
+		{
+			currentAmmo = maxAmmo;
+			reloadCooldownTimer = reloadTime;
+			
 		}
 	}
 }

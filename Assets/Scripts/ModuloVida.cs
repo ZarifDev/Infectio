@@ -12,6 +12,7 @@ public class ModuloVida : MonoBehaviour
 
     void Start()
     {
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerScript.vidaAtual = playerScript.vidaAtual + lifeRegen;
     }
 
