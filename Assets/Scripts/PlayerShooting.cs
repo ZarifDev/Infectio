@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour {
 
-	public Vector3 bulletOffset = new Vector3(0, 0.5f, 0);
+	public Vector3 bulletOffset = new Vector3(0.5f, 0, 0);
 
 	public GameObject bulletPrefab;
 	int bulletLayer;
@@ -17,6 +17,7 @@ public class PlayerShooting : MonoBehaviour {
 	public float fireDelay = 0.25f;
 	float cooldownTimer = 0;
 	Player playerScript;
+	bool canshoot = true;
 
 	void Start() {
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -29,8 +30,9 @@ public class PlayerShooting : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		cooldownTimer -= Time.deltaTime;
-
-		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {
+		reloadTime = playerScript.velocidadeDeRecargaAtual;
+		reloadSlider.maxValue = reloadTime;
+		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading && canshoot) {
 			// SHOOT!
 			cooldownTimer = fireDelay;
 

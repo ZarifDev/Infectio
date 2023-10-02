@@ -12,7 +12,7 @@ public class SpeedModule : MonoBehaviour
     {
         
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
-        movement.PlayerSpeed = increaseSpeed;
+        movement.PlayerSpeed += increaseSpeed;
 
  
     }

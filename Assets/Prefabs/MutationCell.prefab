@@ -985,23 +985,27 @@ MonoBehaviour:
     - name: Aumento de vida Maxima
       itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
-      itemDescription: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    - name: agdgdg
+      itemDescription: Increasse de maximum health
+    - name: Skin
       itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemDescription: assssssssssssssssssssss
+      itemDescription: A cool red skin
   - name: ModulosDeCorpo
     items:
-    - name: dsada
-      itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemDescription: ggggggggggggggggggggggggggggg
+    - name: Energy Cell
+      itemObject: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
+      itemIconPrefab: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
+      itemDescription: Increase virus Speed
+    - name: Tiny DNA
+      itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemDescription: Decrease virus size
   - name: ModulosDeTIro
     items:
-    - name: ghhds
-      itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemDescription: 
+    - name: Reload Module
+      itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
+      itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
+      itemDescription: Decrease gun reload time
 --- !u!1 &6578012101744372356
 GameObject:
   m_ObjectHideFlags: 0

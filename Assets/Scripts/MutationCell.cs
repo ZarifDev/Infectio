@@ -125,6 +125,7 @@ public class MutationCell : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             canSelectModules =true;
+            ChangeSelectionProprites();
         }
     }
 }
