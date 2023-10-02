@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class PlayerShooting : MonoBehaviour {
 	int bulletLayer;
 	public float maxAmmo = 30;
 	public float currentAmmo;
+	public Slider reloadSlider;
 	public float reloadTime = 2f;
 	float reloadCooldownTimer;
 	public bool isReloading;
@@ -16,7 +18,9 @@ public class PlayerShooting : MonoBehaviour {
 	float cooldownTimer = 0;
 
 	void Start() {
-		reloadCooldownTimer = reloadTime;
+		
+
+		reloadSlider.maxValue = reloadTime;
 		bulletLayer = gameObject.layer;
 	}
 
@@ -24,7 +28,7 @@ public class PlayerShooting : MonoBehaviour {
 	void Update () {
 		cooldownTimer -= Time.deltaTime;
 
-		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0) {
+		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {
 			// SHOOT!
 			cooldownTimer = fireDelay;
 
@@ -35,18 +39,23 @@ public class PlayerShooting : MonoBehaviour {
 			bulletGO.layer = bulletLayer;
 		}
 		
-		if(currentAmmo <=0 || Input.GetButtonDown("Fire2"))
+		if(currentAmmo <=0 || Input.GetButtonDown("Fire2") && currentAmmo != maxAmmo|| isReloading)
 		{
 		ReloadGun();
 		}
+		reloadSlider.gameObject.SetActive(isReloading);
 	}
 	void ReloadGun()
 	{
-		reloadCooldownTimer -= Time.deltaTime;
-		if(reloadCooldownTimer <= 0 )
+		isReloading = true;
+		reloadCooldownTimer += Time.deltaTime;
+		reloadSlider.value = reloadCooldownTimer;
+		if(reloadCooldownTimer >= reloadTime )
 		{
 			currentAmmo = maxAmmo;
-			reloadCooldownTimer = reloadTime;
+			reloadCooldownTimer = 0;
+			reloadSlider.value = 0;
+			isReloading = false;
 			
 		}
 	}
