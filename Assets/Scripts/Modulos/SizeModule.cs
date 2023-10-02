@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class SizeModule : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "sizeMod")
-        {
-            this.transform.localScale *= 0.75f;
-            Destroy(other.gameObject);
-        }
-
-    }
+    public Transform playerTransform;
+    public float playerSize;
 
    // Start is called before the first frame update
 
-        void Start()
+    void Start()
     {
-        
+       playerTransform =  GameObject.FindGameObjectWithTag("Player").transform;
+         playerTransform.localScale *= playerSize;
     }
 
     // Update is called once per frame

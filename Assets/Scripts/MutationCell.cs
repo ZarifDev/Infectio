@@ -16,7 +16,7 @@ public class MutationCell : MonoBehaviour
     [SerializeField] int currentSlotSelectionId;
     [SerializeField] float selectAnimTime = 3;
     [SerializeField]  float selectAnimElapsedTime;
-    [SerializeField] bool HasSelected;
+    [SerializeField] bool canSelectModules;
 
     [SerializeField] GameObject player;
     
@@ -46,7 +46,7 @@ public class MutationCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!HasSelected)
+        if(canSelectModules)
         {
          MoveSelection ();
         }
@@ -93,6 +93,7 @@ public class MutationCell : MonoBehaviour
         Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,Quaternion.identity);
         slotItenMeshFilter[currentSlotSelectionId].sharedMesh = null;
         slotItenMeshRenderer[currentSlotSelectionId] = null;
+        canSelectModules = false;
     }
     void ChangeSelectionProprites()
     {
@@ -123,7 +124,7 @@ public class MutationCell : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-
+            canSelectModules =true;
         }
     }
 }
