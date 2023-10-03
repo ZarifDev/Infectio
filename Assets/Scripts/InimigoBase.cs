@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class InimigoBase : MonoBehaviour
 {
-    public float vidaAtual;
-    public float vidaMaxima;
+    public float vidaAtual = 3;
+    public float vidaMaxima = 3;
+    public int custoParaSerSpawnado = 1;
     public GameObject vidaPrefab; // refer. ao ao prefab do item de vida
-
     Player playerScript;
     public static bool chanceDeDroparVida = false;
 
@@ -16,7 +16,7 @@ public class InimigoBase : MonoBehaviour
 
     public void TomarDano(float QuantidadeDeDano)
     {
-        if (vidaAtual - QuantidadeDeDano >= 0)
+        if (vidaAtual - QuantidadeDeDano > 0)
         {
             vidaAtual -= QuantidadeDeDano;
         }
@@ -32,8 +32,9 @@ public class InimigoBase : MonoBehaviour
         if (DeveDroparVida())
         {
             chanceDeDroparVida = true;
-            Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posição do inimigo
+            Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posiï¿½ï¿½o do inimigo
         }
+        EnemySpawner.enemiesActiveInScene.Remove(gameObject);
         Destroy(gameObject);
     }
 
@@ -43,6 +44,7 @@ public class InimigoBase : MonoBehaviour
         float sorteio = Random.Range(0f, 100f);
         return sorteio <= chance;
     }
+   
 }
 
 
