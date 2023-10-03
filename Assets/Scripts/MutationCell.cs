@@ -53,7 +53,7 @@ public class MutationCell : MonoBehaviour
 
         for (int moduleID = 0; moduleID < moduleMananger.CurrentModules.Count; moduleID++)
         {
-            print(moduleID);
+      
             if(moduleMananger.CurrentModules[moduleID].items.Count > 0){
 
                 for (int playerIten = 0; playerIten < moduleMananger.CurrentModules[moduleID].items.Count; playerIten++)

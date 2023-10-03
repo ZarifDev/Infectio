@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5180080541041783281}
   - component: {fileID: 3936287661506041200}
   m_Layer: 0
-  m_Name: LifeUpItem
+  m_Name: LifeIncreaseModule
   m_TagString: HeadModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

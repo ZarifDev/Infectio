@@ -179,6 +179,14 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 2026650705}
+    - target: {fileID: 3148228160189155899, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: fireDelay
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148228160189155899, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: quickFireDelayDecrease
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3770882598261264220, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

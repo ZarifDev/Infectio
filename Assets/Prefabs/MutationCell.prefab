@@ -981,7 +981,7 @@ MonoBehaviour:
   itemsModuleList:
   - name: ModulosDeVida
     items:
-    - name: Aumento de vida Maxima
+    - name: Maximum life Increase
       itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemDescription: Increasse de maximum health

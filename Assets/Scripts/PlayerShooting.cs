@@ -15,6 +15,8 @@ public class PlayerShooting : MonoBehaviour {
 	float reloadCooldownTimer;
 	public bool isReloading;
 	public float fireDelay = 0.25f;
+	public float quickFireDelayDecrease = 0.08f;
+	float currentQuickFireDelay;
 	float cooldownTimer = 0;
 	Player playerScript;
 	public float damage = 1;
@@ -37,17 +39,24 @@ public class PlayerShooting : MonoBehaviour {
 		cooldownTimer -= Time.deltaTime;
 		reloadTime = playerScript.velocidadeDeRecargaAtual;
 		reloadSlider.maxValue = reloadTime;
+		if(Input.GetButtonUp("Fire1"))
+			{	
+			currentQuickFireDelay = quickFireDelayDecrease;
+			}
+		
 		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {
 			// SHOOT!
-			cooldownTimer = fireDelay;
-
+			
+			cooldownTimer = fireDelay-currentQuickFireDelay;
+			
 			Vector3 offset = transform.rotation * bulletOffset;
 
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
 			currentAmmo --;
 			bulletGO.layer = bulletLayer;
+				currentQuickFireDelay = 0;
 		}
-		
+	
 		if(currentAmmo <=0 || Input.GetButtonDown("Fire2") && currentAmmo != maxAmmo|| isReloading)
 		{
 		ReloadGun();

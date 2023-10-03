@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour {
 
     void Start()
     {
-        source = gameObject.GetComponent();
+      //  source = gameObject.GetComponent();
     }
 
     void Update()
@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour {
         if (Input.GetKeyDown("space"))
         {
             isCharging = true;
-            source.Play("Cue_Charging");
+         //   source.Play("Cue_Charging");
             counter = Time.time;
         }
 

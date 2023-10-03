@@ -48,6 +48,7 @@ public class InimigoBase : MonoBehaviour
         if(other.gameObject.tag == "PlayerBullet")
         {
             TomarDano(PlayerBullet.damage);
+            Destroy(other.gameObject);
         }
     }
    
