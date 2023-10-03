@@ -383,12 +383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0.5, y: 0, z: 0}
-  bulletPrefab: {fileID: 3842753181974629829, guid: 87dd905a669652d42b7bad99fbf2f841, type: 3}
+  bulletPrefab: {fileID: 3769013054541384368, guid: e0fd6213c40b1b0458a77111b2c2f92c, type: 3}
   maxAmmo: 10
   currentAmmo: 0
   reloadSlider: {fileID: 2473969523666904895}
+  reloadTime: 1
   isReloading: 0
   fireDelay: 0.25
+  damage: 1
 --- !u!1 &4628455054120324420
 GameObject:
   m_ObjectHideFlags: 0

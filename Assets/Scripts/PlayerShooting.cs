@@ -11,15 +11,16 @@ public class PlayerShooting : MonoBehaviour {
 	public float maxAmmo = 30;
 	public float currentAmmo;
 	public Slider reloadSlider;
-	 float reloadTime = 2f;
+	 public float reloadTime = 1f;
 	float reloadCooldownTimer;
 	public bool isReloading;
 	public float fireDelay = 0.25f;
 	float cooldownTimer = 0;
 	Player playerScript;
-
+	public float damage = 1;
 
 	void Start() {
+		PlayerBullet.damage = damage;
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		playerScript.velocidadeDeRecargaDaArma =  reloadTime; 
 		playerScript.velocidadeDeRecargaAtual =  reloadTime;

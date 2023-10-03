@@ -44,6 +44,12 @@ public class InimigoBase : MonoBehaviour
         float sorteio = Random.Range(0f, 100f);
         return sorteio <= chance;
     }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "PlayerBullet")
+        {
+            TomarDano(PlayerBullet.damage);
+        }
+    }
    
 }
 

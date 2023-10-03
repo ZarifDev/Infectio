@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float velocidadeDeRecargaAtual;
     public Slider Slider;
     public static bool playerCantDoNothing;
+  
 
 
     void Start()
