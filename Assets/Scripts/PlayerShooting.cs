@@ -22,6 +22,7 @@ public class PlayerShooting : MonoBehaviour {
 	void Start() {
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		playerScript.velocidadeDeRecargaDaArma =  reloadTime; 
+		playerScript.velocidadeDeRecargaAtual =  reloadTime;
 		reloadSlider.maxValue = reloadTime;
 		currentAmmo = maxAmmo;
 		bulletLayer = gameObject.layer;
@@ -29,10 +30,13 @@ public class PlayerShooting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
+	 if(Player.playerCantDoNothing == false)
+      {
 		cooldownTimer -= Time.deltaTime;
 		reloadTime = playerScript.velocidadeDeRecargaAtual;
 		reloadSlider.maxValue = reloadTime;
-		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading && canshoot) {
+		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {
 			// SHOOT!
 			cooldownTimer = fireDelay;
 
@@ -49,6 +53,7 @@ public class PlayerShooting : MonoBehaviour {
 		}
 		reloadSlider.gameObject.SetActive(isReloading);
 	}
+	}
 	void ReloadGun()
 	{
 		isReloading = true;
@@ -63,4 +68,5 @@ public class PlayerShooting : MonoBehaviour {
 			
 		}
 	}
+
 }

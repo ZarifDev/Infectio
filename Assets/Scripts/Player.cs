@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public Slider Slider;
     public GameObject cubo;
     public BoxCollider colisor;
-
+    public static bool playerCantDoNothing;
 
 
     void Start()
@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
             vidaAtual = vidaAtual -1;
             
         }
+    
         }
     }
     

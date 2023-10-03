@@ -17,8 +17,12 @@ public class MutationCell : MonoBehaviour
     [SerializeField] float selectAnimTime = 3;
     [SerializeField]  float selectAnimElapsedTime;
     [SerializeField] bool canSelectModules;
-
+    bool moduleSelected;
+    [SerializeField] float movementSpeed = 5;
     [SerializeField] GameObject player;
+    ModuleMananger moduleMananger;
+    [SerializeField] GameObject VirusClones;
+    
     
      [ContextMenu("GetComponents")]
     public void GetMeshFiltersReferences()
@@ -34,23 +38,63 @@ public class MutationCell : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        moduleMananger = player.GetComponent<ModuleMananger>();
         itens = new ItemDrop.Item[slotIten.Length];
         if(slotItenMeshFilter.Length<=0)
         {
             GetMeshFiltersReferences();
         }
-        GenerateItens();
+        RemoveCurrentPlayerItensToDrop();
+           GenerateItens();
+    }
+    
+    void RemoveCurrentPlayerItensToDrop()
+    {
+
+        for (int moduleID = 0; moduleID < moduleMananger.CurrentModules.Count; moduleID++)
+        {
+            print(moduleID);
+            if(moduleMananger.CurrentModules[moduleID].items.Count > 0){
+
+                for (int playerIten = 0; playerIten < moduleMananger.CurrentModules[moduleID].items.Count; playerIten++)
+                { 
+                    for (int i = 0; i <  itenDrop.itemsModuleList[moduleID].items.Count; i++)
+                    {
+                        if( itenDrop.itemsModuleList[moduleID].items[i].name == moduleMananger.CurrentModules[moduleID].items[playerIten].name)
+                        {
+                             itenDrop.itemsModuleList[moduleID].items.RemoveAt(i);
+                        }
+                    }
+                
+             
+                }
+            }
+        }
+      
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        if(canSelectModules)
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            RemoveCurrentPlayerItensToDrop();
+            GenerateItens();
+        }
+        if(canSelectModules )
         {
          MoveSelection ();
         }
+         
+        MoveCell();
        
+    }
+    void MoveCell()
+    {
+        if(transform.position.x >= 0 && !moduleSelected || !canSelectModules){
+          transform.Translate(Vector3.left * Time.deltaTime*movementSpeed); 
+        }
     }
 
     void GenerateItens()
@@ -90,10 +134,19 @@ public class MutationCell : MonoBehaviour
     }
     void SelectModule (ItemDrop.Item item )
     {
+        moduleMananger.CurrentModules[currentSlotSelectionId].items.Add(itens[currentSlotSelectionId]);
         Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,Quaternion.identity);
         slotItenMeshFilter[currentSlotSelectionId].sharedMesh = null;
-        slotItenMeshRenderer[currentSlotSelectionId] = null;
+        slotItenMeshRenderer[currentSlotSelectionId].sharedMaterial = null;
         canSelectModules = false;
+        descriptionText.text ="";
+        GameObject proli = Instantiate(VirusClones, player.transform.position,Quaternion.identity);
+         proli.transform.SetParent(transform);
+        Player.playerCantDoNothing = false;
+         player.transform.SetParent(null);
+         player.transform.localPosition = new Vector3(transform.position.x + (transform.localScale.x/2),transform.position.y,0);
+        moduleSelected = true;
+
     }
     void ChangeSelectionProprites()
     {
@@ -120,11 +173,13 @@ public class MutationCell : MonoBehaviour
         }
     }
     
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Player")
+    private void OnTriggerStay(Collider other) {
+
+        if(other.gameObject.tag == "Player" && moduleSelected == false)
         {
             canSelectModules =true;
+            Player.playerCantDoNothing = true;
+            player.transform.SetParent(transform);
             ChangeSelectionProprites();
         }
     }

@@ -32,7 +32,7 @@ public class ItemDrop : MonoBehaviour
         Item dropItem = itemsModuleList[modulePartId].items[itemToDropId]; // Obtem o item para dropar
 
         // Evita itens repetidos removendo-o da lista de itens
-        itemsModuleList[modulePartId].items.RemoveAt(itemToDropId);
+       // itemsModuleList[modulePartId].items.RemoveAt(itemToDropId);
 
         return dropItem; // Retorna o item dropado
     }

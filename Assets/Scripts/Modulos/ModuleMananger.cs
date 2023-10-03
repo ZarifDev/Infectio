@@ -11,6 +11,8 @@ public class ModuleMananger : MonoBehaviour
     public Transform headModulesLocation;
     public Transform bodyModulesLocation;    
     public Transform feetModulesLocation;
+    
+    public List<ItemDrop.ModulesPart> CurrentModules;
 
     public void AddModuleToPlayer(GameObject ModuleToAdd)
     {
@@ -25,8 +27,9 @@ public class ModuleMananger : MonoBehaviour
         }else if(ModuleToAdd.tag == "FeetModule")
         {
             ModuleToAdd.transform.SetParent(feetModulesLocation);
-        }
+        }else{
          print("!!Atenção!! você precisa colocar uma tag nesse objeto, FeetModule ou BodyModule ou HeadModule");
+        }
           ModuleToAdd.transform.localPosition = Vector3.zero;
     }
      public void ReplacePlayerCurrentModule(GameObject ModuleToRaplace)

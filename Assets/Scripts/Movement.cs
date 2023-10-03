@@ -9,16 +9,20 @@ public class Movement : MonoBehaviour {
 
     public float PlayerRadius = 0.5f;
 
-
     void Start () {
         
     }
 
     void Update ()  {
 
-        // ROTA��O
+      if(!Player.playerCantDoNothing)
+      {
+        Move();
+      }
 
-
+    }
+    void Move()
+    {
         // MOVIMENTA��O
         Vector3 pos = transform.position;
         Vector3 velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"),0) * PlayerSpeed * Time.deltaTime;
@@ -48,7 +52,6 @@ public class Movement : MonoBehaviour {
 
         transform.position = pos;
 
-
-
     }
+    
 }

@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0.5, y: 0, z: 0}
   bulletPrefab: {fileID: 3842753181974629829, guid: 87dd905a669652d42b7bad99fbf2f841, type: 3}
-  maxAmmo: 2
+  maxAmmo: 10
   currentAmmo: 0
   reloadSlider: {fileID: 2473969523666904895}
   isReloading: 0
@@ -871,6 +871,13 @@ MonoBehaviour:
   headModulesLocation: {fileID: 9155051302952088319}
   bodyModulesLocation: {fileID: 6031780600583866193}
   feetModulesLocation: {fileID: 105398541384610394}
+  CurrentModules:
+  - name: 
+    items: []
+  - name: 
+    items: []
+  - name: 
+    items: []
 --- !u!65 &1936317546745426817
 BoxCollider:
   m_ObjectHideFlags: 0
