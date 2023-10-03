@@ -19,7 +19,7 @@ public class MutationCell : MonoBehaviour
     [SerializeField] bool canSelectModules;
     bool moduleSelected;
     [SerializeField] float movementSpeed = 5;
-    [SerializeField] GameObject player;
+     GameObject player;
     ModuleMananger moduleMananger;
     [SerializeField] GameObject VirusClones;
     
@@ -42,10 +42,10 @@ public class MutationCell : MonoBehaviour
         itens = new ItemDrop.Item[slotIten.Length];
         if(slotItenMeshFilter.Length<=0)
         {
-            GetMeshFiltersReferences();
+        GetMeshFiltersReferences();
         }
         RemoveCurrentPlayerItensToDrop();
-           GenerateItens();
+        GenerateItens();
     }
     
     void RemoveCurrentPlayerItensToDrop()
@@ -88,7 +88,11 @@ public class MutationCell : MonoBehaviour
         }
          
         MoveCell();
-       
+       if(transform.position.x < -15)
+       {
+        Destroy(gameObject);
+        LevelSpawner.enemiesActiveInScene.Remove(gameObject);
+       }
     }
     void MoveCell()
     {

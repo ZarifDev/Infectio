@@ -965,8 +965,7 @@ MonoBehaviour:
   selectAnimElapsedTime: 0
   canSelectModules: 0
   movementSpeed: 5
-  player: {fileID: 0}
-  VirusClones: {fileID: 0}
+  VirusClones: {fileID: 4952128550014237788, guid: 93dfe4093dc66ac419daa2e767716ae8, type: 3}
 --- !u!114 &567758159636813612
 MonoBehaviour:
   m_ObjectHideFlags: 0

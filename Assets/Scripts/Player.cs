@@ -11,10 +11,7 @@ public class Player : MonoBehaviour
 
     public float velocidadeDeRecargaDaArma;
     public float velocidadeDeRecargaAtual;
-
     public Slider Slider;
-    public GameObject cubo;
-    public BoxCollider colisor;
     public static bool playerCantDoNothing;
 
 
@@ -47,12 +44,16 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter(Collision algum_objeto) 
     {
-        if(algum_objeto.gameObject.tag == "Inimigo")
+        if(algum_objeto.gameObject.tag == "Bala")
         {
             vidaAtual = vidaAtual -1;
             
         }
-    
+      if(algum_objeto.gameObject.tag == "Inimigo")
+      {
+         vidaAtual = vidaAtual -1;
+         algum_objeto.gameObject.GetComponent<InimigoBase>().TomarDano(10000);
+      }
         }
     }
     

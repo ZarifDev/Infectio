@@ -17,7 +17,7 @@ public class PlayerShooting : MonoBehaviour {
 	public float fireDelay = 0.25f;
 	float cooldownTimer = 0;
 	Player playerScript;
-	bool canshoot = true;
+
 
 	void Start() {
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();

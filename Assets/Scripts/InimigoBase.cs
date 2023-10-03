@@ -34,7 +34,7 @@ public class InimigoBase : MonoBehaviour
             chanceDeDroparVida = true;
             Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posi��o do inimigo
         }
-        EnemySpawner.enemiesActiveInScene.Remove(gameObject);
+        LevelSpawner.enemiesActiveInScene.Remove(gameObject);
         Destroy(gameObject);
     }
 
