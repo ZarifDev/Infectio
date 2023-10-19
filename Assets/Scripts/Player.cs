@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -18,13 +19,16 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
+      vidaAtual = vidaMaxima;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Slider.value = vidaAtual;
+      if(Input.GetKeyDown(KeyCode.Escape))
+      {
+        SceneManager.LoadScene(0);
+      }
     }
     
     public void Cura(float vidaParaCurar)
@@ -32,7 +36,11 @@ public class Player : MonoBehaviour
         //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
         if(vidaAtual + vidaParaCurar > vidaMaxima){
         vidaAtual = vidaMaxima;
+        }else
+        {
+             vidaAtual += vidaParaCurar;
         }
+          Slider.value = vidaAtual;
     }
     public void  TakeDamage(float QuantidadeDeDano)
     {
@@ -42,19 +50,28 @@ public class Player : MonoBehaviour
         {
             vidaAtual = 0;
         }
+          Slider.value = vidaAtual;
     }
-    private void OnCollisionEnter(Collision algum_objeto) 
+    void OnCollisionEnter(Collision algum_objeto) 
     {
-        if(algum_objeto.gameObject.tag == "Bala")
-        {
-            vidaAtual = vidaAtual -1;
-            
-        }
+      
       if(algum_objeto.gameObject.tag == "Inimigo")
       {
-         vidaAtual = vidaAtual -1;
+        TakeDamage(1);
          algum_objeto.gameObject.GetComponent<InimigoBase>().TomarDano(10000);
       }
+    }
+        
+        void OnTriggerEnter(Collider other)
+        {
+   
+        if(other.gameObject.tag == "Bala")
+        {
+           TakeDamage(1);
+           Destroy(other.gameObject);
+            
+        }
         }
     }
+
     

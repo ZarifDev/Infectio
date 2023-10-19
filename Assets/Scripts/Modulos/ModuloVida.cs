@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ModuloVida : MonoBehaviour
 {
-    public float speed = 5.0f;
+
     public int maxlifeIcrease = 5;
      Player playerScript;
     // Start is called before the first frame update
@@ -13,7 +13,7 @@ public class ModuloVida : MonoBehaviour
     {
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerScript.vidaMaxima = maxlifeIcrease;
+        playerScript.vidaMaxima += maxlifeIcrease;
         playerScript.Cura(playerScript.vidaMaxima);
     }
 

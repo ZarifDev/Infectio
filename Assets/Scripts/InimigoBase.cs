@@ -29,9 +29,9 @@ public class InimigoBase : MonoBehaviour
 
     public void morrer()
     {
-        if (DeveDroparVida())
+        if (DeveDroparVida() && chanceDeDroparVida)
         {
-            chanceDeDroparVida = true;
+            
             Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posi��o do inimigo
         }
         LevelSpawner.enemiesActiveInScene.Remove(gameObject);
@@ -40,9 +40,15 @@ public class InimigoBase : MonoBehaviour
 
     bool DeveDroparVida()
     {
-        float chance = 10f;
+        float chance = 80f;
         float sorteio = Random.Range(0f, 100f);
-        return sorteio <= chance;
+        if(sorteio <= chance)
+        {
+            return true;
+        }else
+        {
+             return false;
+        }
     }
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "PlayerBullet")

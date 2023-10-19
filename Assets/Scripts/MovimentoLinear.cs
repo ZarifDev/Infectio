@@ -6,7 +6,7 @@ public class MovimentoLinear : MonoBehaviour
 {
     // Start is called before the first frame update
     public float velocidadedoadversario = 3;
-
+     float centroDaTelaOffset = 4; 
     void Update()
     {
         MovimentarAdversario();
@@ -14,6 +14,8 @@ public class MovimentoLinear : MonoBehaviour
     }
     private void MovimentarAdversario() 
     {
+        if(transform.position.x >= 0 + centroDaTelaOffset ){
         transform.Translate(Vector3.left * velocidadedoadversario * Time.deltaTime);
+        }
     }
 }

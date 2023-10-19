@@ -14,8 +14,9 @@ public class LifeItem : MonoBehaviour
 
     void Start()
     {
+        Destroy(gameObject,10);
         //quando a vida for spawnada ela vai procurar na cena se tem um objeto chamado player e pegar o script player dele
-        playerScript = GameObject.Find("Player").GetComponent<Player>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class LifeItem : MonoBehaviour
         {
             //cura o player acessando o script player e aumenta a vida atual e depois se destroi
             playerScript.Cura(lifeRegen);
+            print("cura");
             Destroy(this.gameObject);  // o que acontece se a tag "Player"?
         }
     }

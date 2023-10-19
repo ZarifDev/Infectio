@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 106737426206878297, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 714936274263437907, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -179,13 +183,17 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 2026650705}
+    - target: {fileID: 2706341635465325798, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: vidaAtual
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3148228160189155899, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: fireDelay
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3148228160189155899, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: quickFireDelayDecrease
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3770882598261264220, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -247,6 +255,10 @@ PrefabInstance:
     - target: {fileID: 76355656890300033, guid: a96d1db448067ff4e98f929f7320ac48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154717318628735490, guid: a96d1db448067ff4e98f929f7320ac48, type: 3}
+      propertyPath: totalPointsToSpendWithSpawn
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7354891809381442633, guid: a96d1db448067ff4e98f929f7320ac48, type: 3}
       propertyPath: m_Name

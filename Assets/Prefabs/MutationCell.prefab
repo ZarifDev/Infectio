@@ -101,13 +101,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865730745982801365}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.30070576, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.63000005, y: 0.63000005, z: 0.63000005}
+  m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6200866810309573849}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!33 &2387958072110648378
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865730745982801365}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8349124454469019066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -268,13 +268,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416316147736071926}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.30070576, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.63000005, y: 0.63000005, z: 0.63000005}
+  m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8423441933111781448}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!33 &1558346381129917818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -766,13 +766,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5650288200431233235}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.30070576, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1699637392183115401}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!33 &4950369830847076631
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -981,30 +981,22 @@ MonoBehaviour:
   itemsModuleList:
   - name: ModulosDeVida
     items:
-    - name: Maximum life Increase
+    - name: Max life Increase
       itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemDescription: Increasse de maximum health
-    - name: Skin
+    - name: Vampirism
       itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemDescription: A cool red skin
+      itemDescription: ' Enemies have a chance to drop health when die'
   - name: ModulosDeCorpo
     items:
     - name: Energy Cell
       itemObject: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
       itemIconPrefab: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
       itemDescription: Increase virus Speed
-    - name: Tiny DNA
-      itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
-      itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
-      itemDescription: Decrease virus size in 25%
   - name: ModulosDeTIro
     items:
-    - name: Reload Module
-      itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
-      itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
-      itemDescription: Decrease gun reload time
     - name: Reload Module
       itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
       itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}

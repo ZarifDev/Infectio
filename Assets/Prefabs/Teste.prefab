@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8066748324442238794}
   - component: {fileID: 9192182890491493684}
   - component: {fileID: 1235643418618910391}
+  - component: {fileID: 8003618481708072942}
   m_Layer: 0
   m_Name: Teste
   m_TagString: HeadModule
@@ -116,5 +117,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6b383c00a1e7e7458acf7da4f176955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8003618481708072942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108425867204405638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dbb2696d0d51747b75ed9aa87d99d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

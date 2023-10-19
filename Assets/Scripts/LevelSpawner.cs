@@ -68,7 +68,7 @@ public class LevelSpawner : MonoBehaviour
             {
                 //pega um inimigo aleatório para spawnar
                 int randomEnemyId = Random.Range(0,enemiesSpawnCost.Length);
-                print(randomEnemyId);
+
                 // se o custo de spawn desse inimigo não excecer o tanto de pontos que pode gastar com o spawn, ele é instanciado na cena
                 if(currentSpentPoints+ enemiesSpawnCost[randomEnemyId] <= totalPointsToSpendWithSpawn){
             currentSpentPoints += enemiesSpawnCost[randomEnemyId];

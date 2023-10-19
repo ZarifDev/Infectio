@@ -20,6 +20,7 @@ public class PlayerShooting : MonoBehaviour {
 	float cooldownTimer = 0;
 	Player playerScript;
 	public float damage = 1;
+	public float bulletLifeTime = 1;
 
 	void Start() {
 		PlayerBullet.damage = damage;
