@@ -11,7 +11,7 @@ public class FastReloadModule : MonoBehaviour
     {
         
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-
+        playerScript.velocidadeDeRecargaAtual =  playerScript.velocidadeDeRecargaDaArma - reloadSpeedIncrease;
  
     }
 
@@ -19,6 +19,6 @@ public class FastReloadModule : MonoBehaviour
     void Update()
     {
         
-       playerScript.velocidadeDeRecargaAtual =  playerScript.velocidadeDeRecargaDaArma - reloadSpeedIncrease;
+      
     }
 }

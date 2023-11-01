@@ -28,6 +28,7 @@ public class LevelSpawner : MonoBehaviour
             enemiesSpawnCost[i] = enemies[i].GetComponent<InimigoBase>().custoParaSerSpawnado;
         }
         StartSpawning();
+
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class LevelSpawner : MonoBehaviour
     {
   
         //se nao tiver inimigos vivos na cena, spawna uma nova quantia deles
-      if(enemiesActiveInScene.Count ==0 && currentWave <= Waves || Input.GetKeyDown(KeyCode.E))
+      if(enemiesActiveInScene.Count ==0 && currentWave <= Waves)
       {
         
         StartSpawning();     
@@ -45,7 +46,7 @@ public class LevelSpawner : MonoBehaviour
     }
     void StartSpawning()
     {
-        if(currentWave == Waves/2)
+        if(currentWave == Waves/2 || currentWave >=Waves)
         {
             SpawnMutationCell();
         }else

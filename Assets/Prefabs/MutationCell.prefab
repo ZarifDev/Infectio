@@ -199,7 +199,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324552261416276073}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 289301614986012343, guid: 4748be31000c6cb4a8749fb99453cf8b, type: 3}
 --- !u!23 &8010594681300274673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -501,12 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-
-
-
-    INFECT'
+  m_text: INFECT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -533,15 +528,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
-  m_fontSizeBase: 0.6
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 32
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -569,7 +564,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -0.9242618, z: 0.77038777, w: -0.101018675}
+  m_margin: {x: 0.3845737, y: -0.9242618, z: 0.77038777, w: -0.101018675}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -870,7 +865,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6038417372866451697}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 289301614986012343, guid: 4748be31000c6cb4a8749fb99453cf8b, type: 3}
 --- !u!23 &4028482610769622501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +960,7 @@ MonoBehaviour:
   selectAnimElapsedTime: 0
   canSelectModules: 0
   movementSpeed: 5
-  VirusClones: {fileID: 4952128550014237788, guid: 93dfe4093dc66ac419daa2e767716ae8, type: 3}
+  VirusClones: {fileID: 1344021205808646115, guid: 93dfe4093dc66ac419daa2e767716ae8, type: 3}
 --- !u!114 &567758159636813612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,16 +986,28 @@ MonoBehaviour:
       itemDescription: ' Enemies have a chance to drop health when die'
   - name: ModulosDeCorpo
     items:
-    - name: Energy Cell
+    - name: Collar
       itemObject: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
       itemIconPrefab: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
       itemDescription: Increase virus Speed
+    - name: Low Body
+      itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemDescription: Deacrease Virus Size in 25%
   - name: ModulosDeTIro
     items:
     - name: Reload Module
       itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
       itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
       itemDescription: Decrease gun reload time
+    - name: ShotGun
+      itemObject: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
+      itemIconPrefab: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
+      itemDescription: high damage and short range
+    - name: MachineGun
+      itemObject: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
+      itemIconPrefab: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
+      itemDescription: ' lots of bullets, high firerate but takes longer to reload'
 --- !u!1 &6578012101744372356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1188,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7516805548082206975}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 289301614986012343, guid: 4748be31000c6cb4a8749fb99453cf8b, type: 3}
 --- !u!23 &5667288577688199899
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1265,7 +1272,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8654555336643590709}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 289301614986012343, guid: 4748be31000c6cb4a8749fb99453cf8b, type: 3}
 --- !u!23 &8140894952937855521
 MeshRenderer:
   m_ObjectHideFlags: 0

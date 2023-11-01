@@ -9,11 +9,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public float vidaMaxima = 3; 
     public float vidaAtual = 3;
+    public float invencibleTime = 1;
 
     public float velocidadeDeRecargaDaArma;
     public float velocidadeDeRecargaAtual;
-    public Slider Slider;
+    public Slider lifeSlider;
+    public Slider reloadSlider;
     public static bool playerCantDoNothing;
+    bool isInvencible;
   
 
 
@@ -40,17 +43,25 @@ public class Player : MonoBehaviour
         {
              vidaAtual += vidaParaCurar;
         }
-          Slider.value = vidaAtual;
+          lifeSlider.value = vidaAtual;
     }
     public void  TakeDamage(float QuantidadeDeDano)
     {
+      if(!isInvencible){
         if(vidaAtual - QuantidadeDeDano >=0){
         vidaAtual -= QuantidadeDeDano;
         }else
         {
             vidaAtual = 0;
         }
-          Slider.value = vidaAtual;
+          lifeSlider.value = vidaAtual;
+          isInvencible = true;
+          Invoke("ExitInvecibleMode",invencibleTime);
+      }
+    }
+    void ExitInvecibleMode()
+    {
+     isInvencible = false;
     }
     void OnCollisionEnter(Collision algum_objeto) 
     {

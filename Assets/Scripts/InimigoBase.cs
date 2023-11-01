@@ -40,7 +40,7 @@ public class InimigoBase : MonoBehaviour
 
     bool DeveDroparVida()
     {
-        float chance = 80f;
+        float chance = 10f;
         float sorteio = Random.Range(0f, 100f);
         if(sorteio <= chance)
         {
@@ -50,7 +50,7 @@ public class InimigoBase : MonoBehaviour
              return false;
         }
     }
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "PlayerBullet")
         {
             TomarDano(PlayerBullet.damage);

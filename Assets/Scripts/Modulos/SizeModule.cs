@@ -11,6 +11,7 @@ public class SizeModule : MonoBehaviour
 
     void Start()
     {
+      transform.localScale *= playerSize;
        playerTransform =  GameObject.FindGameObjectWithTag("Player").transform;
          playerTransform.localScale *= playerSize;
     }

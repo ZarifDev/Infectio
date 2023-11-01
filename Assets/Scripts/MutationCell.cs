@@ -60,7 +60,8 @@ public class MutationCell : MonoBehaviour
                 { 
                     for (int i = 0; i <  itenDrop.itemsModuleList[moduleID].items.Count; i++)
                     {
-                        if( itenDrop.itemsModuleList[moduleID].items[i].name == moduleMananger.CurrentModules[moduleID].items[playerIten].name)
+                        //cheaca se o modulo selecionado ja existe no player e se nao tem o script de modulo stacavel, e remove da lista de drops
+                        if( itenDrop.itemsModuleList[moduleID].items[i].name == moduleMananger.CurrentModules[moduleID].items[playerIten].name &&itenDrop.itemsModuleList[moduleID].items[i].itemObject.GetComponent<StackableModule>()==null)
                         {
                              itenDrop.itemsModuleList[moduleID].items.RemoveAt(i);
                         }
@@ -139,7 +140,7 @@ public class MutationCell : MonoBehaviour
     void SelectModule (ItemDrop.Item item )
     {
         moduleMananger.CurrentModules[currentSlotSelectionId].items.Add(itens[currentSlotSelectionId]);
-        Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,Quaternion.identity);
+        Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,itens[currentSlotSelectionId].itemObject.transform.rotation);
         slotItenMeshFilter[currentSlotSelectionId].sharedMesh = null;
         slotItenMeshRenderer[currentSlotSelectionId].sharedMaterial = null;
         canSelectModules = false;
