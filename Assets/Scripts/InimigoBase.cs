@@ -5,13 +5,16 @@ public class InimigoBase : MonoBehaviour
     public float vidaAtual = 3;
     public float vidaMaxima = 3;
     public int custoParaSerSpawnado = 1;
+    public AudioClip deathSound;
     public GameObject vidaPrefab; // refer. ao ao prefab do item de vida
     Player playerScript;
     public static bool chanceDeDroparVida = false;
 
+
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+     print(chanceDeDroparVida);
         
     }
 
@@ -30,6 +33,7 @@ public class InimigoBase : MonoBehaviour
 
     public void morrer()
     {
+        playerScript.PlaySound(deathSound);
         if (DeveDroparVida() && chanceDeDroparVida)
         {
             

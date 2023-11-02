@@ -16,13 +16,15 @@ public class Player : MonoBehaviour
     public Slider lifeSlider;
     public Slider reloadSlider;
     public static bool playerCantDoNothing;
+    public static AudioSource audioSource;
     bool isInvencible;
-  
+    public AudioClip playerHit;
 
 
     void Start()
     {
       vidaAtual = vidaMaxima;
+      audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class Player : MonoBehaviour
           lifeSlider.value = vidaAtual;
           isInvencible = true;
           Invoke("ExitInvecibleMode",invencibleTime);
+          PlaySound(playerHit);
       }
     }
     void ExitInvecibleMode()
@@ -82,6 +85,10 @@ public class Player : MonoBehaviour
             
         }
         }
+    
+    public void PlaySound(AudioClip clip)
+    {
+      audioSource.PlayOneShot(clip);
     }
-
+}
     

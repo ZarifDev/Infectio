@@ -23,8 +23,11 @@ public class PlayerShooting : MonoBehaviour {
 	[SerializeField] Transform[] firePoints;
 	[SerializeField] float precisionVariation;
 	public float bulletSpeedIncrease = 0;
-
+	AudioSource audioSource;
+	public AudioClip shootSound;
+	public AudioClip reloadSound;
 	void Start() {
+		audioSource = GetComponent<AudioSource>();
 		PlayerBullet.damage = damage;
 		PlayerBullet.lifeTime = bulletLifeTime;
 		PlayerBullet.speedIncrease = bulletSpeedIncrease;
@@ -57,13 +60,18 @@ public class PlayerShooting : MonoBehaviour {
 		if(currentAmmo <=0 || Input.GetButtonDown("Fire2") && currentAmmo != maxAmmo|| isReloading)
 		{
 		ReloadGun();
+		
 		}
 		reloadSlider.gameObject.SetActive(isReloading);
 	}
 	}
 	void ReloadGun()
 	{
+		if(!isReloading){
+		audioSource.pitch = 1;
+		PlaySound(reloadSound);
 		isReloading = true;
+		}
 		reloadCooldownTimer += Time.deltaTime;
 		reloadSlider.value = reloadCooldownTimer;
 		if(reloadCooldownTimer >= reloadTime )
@@ -86,8 +94,13 @@ public class PlayerShooting : MonoBehaviour {
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoints[i].transform.position,Quaternion.Euler(0,0,firePoints[i].rotation.eulerAngles.z + bulletVariation));
 			}
 			currentAmmo --;
+			audioSource.pitch +=0.05f;
 			currentQuickFireDelay = 0;
+			PlaySound(shootSound);
 
 	}
-
+	void PlaySound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
+	}
 }

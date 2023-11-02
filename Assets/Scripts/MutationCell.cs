@@ -22,7 +22,9 @@ public class MutationCell : MonoBehaviour
      GameObject player;
     ModuleMananger moduleMananger;
     [SerializeField] GameObject VirusClones;
-    
+    AudioSource audioSource;
+      [SerializeField] AudioClip changeSelection;
+        [SerializeField] AudioClip select;
     
      [ContextMenu("GetComponents")]
     public void GetMeshFiltersReferences()
@@ -37,6 +39,7 @@ public class MutationCell : MonoBehaviour
     }
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         moduleMananger = player.GetComponent<ModuleMananger>();
         itens = new ItemDrop.Item[slotIten.Length];
@@ -122,16 +125,18 @@ public class MutationCell : MonoBehaviour
         currentSlotSelectionId--;
         selectAnimElapsedTime=0;
           ChangeSelectionProprites();
+          PlaySound(changeSelection);   
         }
         if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow))
         {
+        PlaySound(changeSelection);
         currentSlotSelectionId++;
         selectAnimElapsedTime=0;
         ChangeSelectionProprites();
         }
         if(Input.GetKeyDown(KeyCode.Space)||Input.GetButtonDown("Fire1"))
         {
-
+            
             SelectModule(itens[currentSlotSelectionId]);
     
         }
@@ -151,10 +156,12 @@ public class MutationCell : MonoBehaviour
          player.transform.SetParent(null);
          player.transform.localPosition = new Vector3(transform.position.x + (transform.localScale.x/2),transform.position.y,0);
         moduleSelected = true;
+        PlaySound(select);
 
     }
     void ChangeSelectionProprites()
     {
+        
         currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,slotIten.Length-1);
         descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itemDescription;
        
@@ -188,4 +195,8 @@ public class MutationCell : MonoBehaviour
             ChangeSelectionProprites();
         }
     }
+    void PlaySound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
+	}
 }
