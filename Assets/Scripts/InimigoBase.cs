@@ -12,6 +12,7 @@ public class InimigoBase : MonoBehaviour
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        
     }
 
     public void TomarDano(float QuantidadeDeDano)

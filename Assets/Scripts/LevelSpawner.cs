@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LevelSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,11 +9,12 @@ public class LevelSpawner : MonoBehaviour
     int currentWave;
     public int totalPointsToSpendWithSpawn;
     [SerializeField] GameObject[] enemies;
+    [SerializeField] GameObject boss;
     [SerializeField] Transform [] spawnPoints;
      int[] enemiesSpawnCost;
      [SerializeField] GameObject MutationCell;
-
-    public static List<GameObject> enemiesActiveInScene = new List<GameObject>();
+    bool bossTime;
+    [SerializeField] public static List<GameObject> enemiesActiveInScene = new List<GameObject>();
     void Start()
     {
        
@@ -27,14 +28,38 @@ public class LevelSpawner : MonoBehaviour
 
             enemiesSpawnCost[i] = enemies[i].GetComponent<InimigoBase>().custoParaSerSpawnado;
         }
-        StartSpawning();
+
 
     }
 
+    void Cheats()
+    {
+        if(Input.GetKeyDown(KeyCode.X)){
+        for (int i = enemiesActiveInScene.Count-1; i >=0; i--)
+        {
+            if(enemiesActiveInScene[i].tag == "Inimigo"){
+            Destroy(enemiesActiveInScene[i]);
+                        enemiesActiveInScene.RemoveAt(i);
+        
+            }
+         
+        }
+
+
+
+
+       
+        if(boss != null&& boss.activeInHierarchy)
+        {
+        Destroy(boss);            
+        }
+   
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-  
+        Cheats();
         //se nao tiver inimigos vivos na cena, spawna uma nova quantia deles
       if(enemiesActiveInScene.Count ==0 && currentWave <= Waves)
       {
@@ -42,11 +67,21 @@ public class LevelSpawner : MonoBehaviour
         StartSpawning();     
      
       }
+    if(enemiesActiveInScene.Count ==0 && currentWave > Waves )
+    {
+        if(boss != null)
+        {
+            boss.SetActive(true);
+        }else{
+        SceneManager.LoadScene(1);
+        }
+    }
+   
    
     }
     void StartSpawning()
     {
-        if(currentWave == Waves/2 || currentWave >=Waves)
+        if(currentWave == Waves/2 || currentWave ==Waves)
         {
             SpawnMutationCell();
         }else

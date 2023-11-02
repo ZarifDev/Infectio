@@ -63,13 +63,12 @@ public class Player : MonoBehaviour
     {
      isInvencible = false;
     }
-    void OnCollisionEnter(Collision algum_objeto) 
+     private void OnCollisionStay(Collision algum_objeto) 
     {
       
-      if(algum_objeto.gameObject.tag == "Inimigo")
+      if(algum_objeto.gameObject.tag == "Inimigo" && !isInvencible)
       {
         TakeDamage(1);
-         algum_objeto.gameObject.GetComponent<InimigoBase>().TomarDano(10000);
       }
     }
         

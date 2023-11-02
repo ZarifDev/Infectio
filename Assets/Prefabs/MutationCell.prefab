@@ -993,7 +993,7 @@ MonoBehaviour:
     - name: Low Body
       itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
       itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
-      itemDescription: Deacrease Virus Size in 25%
+      itemDescription: Deacrease Virus Size in 25% but bullets has less range
   - name: ModulosDeTIro
     items:
     - name: Reload Module

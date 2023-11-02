@@ -565,6 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vidaAtual: 3
+  invencibleTime: 1.5
   velocidadeDeRecargaDaArma: 0
   velocidadeDeRecargaAtual: 0
   lifeSlider: {fileID: 0}
@@ -937,7 +938,7 @@ MonoBehaviour:
   bulletLifeTime: 1
   firePoints:
   - {fileID: 5938603759065892031}
-  precisionVariation: 3
+  precisionVariation: 6
   bulletSpeedIncrease: 0
 --- !u!4 &5574085942549945205 stripped
 Transform:
