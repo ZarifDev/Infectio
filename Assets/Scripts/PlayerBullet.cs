@@ -5,17 +5,25 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
   
-    [SerializeField] float speed;
-    public float lifeTime= 3;
+    [SerializeField] float speed = 5;
+    [SerializeField] float lifeTimeDelay = 0.2f;
+    public static float lifeTime= 3;
     public static float damage = 1;
+     public static float speedIncrease;
+
 
     // Update is called once per frame
     void Start()
     {
-        Destroy(gameObject,lifeTime);
+        Invoke("StopBullet",lifeTime-lifeTimeDelay);
+        Destroy(this.gameObject,lifeTime);
     }
     void Update()
+    {   
+         transform.Translate(Vector3.right * Time.deltaTime*(speed+speedIncrease)); 
+    }
+    void StopBullet()
     {
-         transform.Translate(Vector3.right * Time.deltaTime*speed); 
+        speed /= 4;
     }
 }

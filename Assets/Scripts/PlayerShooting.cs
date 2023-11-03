@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour {
 
-	public Vector3 bulletOffset = new Vector3(0.5f, 0, 0);
 
 	public GameObject bulletPrefab;
 	int bulletLayer;
 	public float maxAmmo = 30;
 	public float currentAmmo;
-	public Slider reloadSlider;
+	 Slider reloadSlider;
 	 public float reloadTime = 1f;
 	float reloadCooldownTimer;
 	public bool isReloading;
@@ -21,15 +20,24 @@ public class PlayerShooting : MonoBehaviour {
 	Player playerScript;
 	public float damage = 1;
 	public float bulletLifeTime = 1;
-
+	[SerializeField] Transform[] firePoints;
+	[SerializeField] float precisionVariation;
+	public float bulletSpeedIncrease = 0;
+	AudioSource audioSource;
+	public AudioClip shootSound;
+	public AudioClip reloadSound;
 	void Start() {
+		audioSource = GetComponent<AudioSource>();
 		PlayerBullet.damage = damage;
+		PlayerBullet.lifeTime = bulletLifeTime;
+		PlayerBullet.speedIncrease = bulletSpeedIncrease;
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 		playerScript.velocidadeDeRecargaDaArma =  reloadTime; 
 		playerScript.velocidadeDeRecargaAtual =  reloadTime;
+		reloadSlider = playerScript.reloadSlider;
 		reloadSlider.maxValue = reloadTime;
 		currentAmmo = maxAmmo;
-		bulletLayer = gameObject.layer;
+
 	}
 
 	// Update is called once per frame
@@ -46,28 +54,24 @@ public class PlayerShooting : MonoBehaviour {
 			}
 		
 		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {
-			// SHOOT!
-			
-			cooldownTimer = fireDelay-currentQuickFireDelay;
-			
-			Vector3 offset = transform.rotation * bulletOffset;
-
-			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
-			currentAmmo --;
-			bulletGO.layer = bulletLayer;
-				currentQuickFireDelay = 0;
+			Shoot();
 		}
 	
 		if(currentAmmo <=0 || Input.GetButtonDown("Fire2") && currentAmmo != maxAmmo|| isReloading)
 		{
 		ReloadGun();
+		
 		}
 		reloadSlider.gameObject.SetActive(isReloading);
 	}
 	}
 	void ReloadGun()
 	{
+		if(!isReloading){
+		audioSource.pitch = 1;
+		PlaySound(reloadSound);
 		isReloading = true;
+		}
 		reloadCooldownTimer += Time.deltaTime;
 		reloadSlider.value = reloadCooldownTimer;
 		if(reloadCooldownTimer >= reloadTime )
@@ -79,5 +83,24 @@ public class PlayerShooting : MonoBehaviour {
 			
 		}
 	}
+	 void Shoot()
+	{
+	
+			cooldownTimer = fireDelay-currentQuickFireDelay;
 
+			for (int i = 0; i < firePoints.Length; i++)
+			{
+			float bulletVariation = Random.Range(-precisionVariation,precisionVariation);
+			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoints[i].transform.position,Quaternion.Euler(0,0,firePoints[i].rotation.eulerAngles.z + bulletVariation));
+			}
+			currentAmmo --;
+			audioSource.pitch +=0.05f;
+			currentQuickFireDelay = 0;
+			PlaySound(shootSound);
+
+	}
+	void PlaySound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
+	}
 }

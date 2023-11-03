@@ -9,17 +9,22 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public float vidaMaxima = 3; 
     public float vidaAtual = 3;
+    public float invencibleTime = 1;
 
     public float velocidadeDeRecargaDaArma;
     public float velocidadeDeRecargaAtual;
-    public Slider Slider;
+    public Slider lifeSlider;
+    public Slider reloadSlider;
     public static bool playerCantDoNothing;
-  
+    public static AudioSource audioSource;
+    bool isInvencible;
+    public AudioClip playerHit;
 
 
     void Start()
     {
       vidaAtual = vidaMaxima;
+      audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,25 +45,33 @@ public class Player : MonoBehaviour
         {
              vidaAtual += vidaParaCurar;
         }
-          Slider.value = vidaAtual;
+          lifeSlider.value = vidaAtual;
     }
     public void  TakeDamage(float QuantidadeDeDano)
     {
+      if(!isInvencible){
         if(vidaAtual - QuantidadeDeDano >=0){
         vidaAtual -= QuantidadeDeDano;
         }else
         {
             vidaAtual = 0;
         }
-          Slider.value = vidaAtual;
+          lifeSlider.value = vidaAtual;
+          isInvencible = true;
+          Invoke("ExitInvecibleMode",invencibleTime);
+          PlaySound(playerHit);
+      }
     }
-    void OnCollisionEnter(Collision algum_objeto) 
+    void ExitInvecibleMode()
+    {
+     isInvencible = false;
+    }
+     private void OnCollisionStay(Collision algum_objeto) 
     {
       
-      if(algum_objeto.gameObject.tag == "Inimigo")
+      if(algum_objeto.gameObject.tag == "Inimigo" && !isInvencible)
       {
         TakeDamage(1);
-         algum_objeto.gameObject.GetComponent<InimigoBase>().TomarDano(10000);
       }
     }
         
@@ -72,6 +85,10 @@ public class Player : MonoBehaviour
             
         }
         }
+    
+    public void PlaySound(AudioClip clip)
+    {
+      audioSource.PlayOneShot(clip);
     }
-
+}
     

@@ -22,7 +22,9 @@ public class MutationCell : MonoBehaviour
      GameObject player;
     ModuleMananger moduleMananger;
     [SerializeField] GameObject VirusClones;
-    
+    AudioSource audioSource;
+      [SerializeField] AudioClip changeSelection;
+        [SerializeField] AudioClip select;
     
      [ContextMenu("GetComponents")]
     public void GetMeshFiltersReferences()
@@ -37,6 +39,7 @@ public class MutationCell : MonoBehaviour
     }
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         moduleMananger = player.GetComponent<ModuleMananger>();
         itens = new ItemDrop.Item[slotIten.Length];
@@ -60,7 +63,8 @@ public class MutationCell : MonoBehaviour
                 { 
                     for (int i = 0; i <  itenDrop.itemsModuleList[moduleID].items.Count; i++)
                     {
-                        if( itenDrop.itemsModuleList[moduleID].items[i].name == moduleMananger.CurrentModules[moduleID].items[playerIten].name)
+                        //cheaca se o modulo selecionado ja existe no player e se nao tem o script de modulo stacavel, e remove da lista de drops
+                        if( itenDrop.itemsModuleList[moduleID].items[i].name == moduleMananger.CurrentModules[moduleID].items[playerIten].name &&itenDrop.itemsModuleList[moduleID].items[i].itemObject.GetComponent<StackableModule>()==null)
                         {
                              itenDrop.itemsModuleList[moduleID].items.RemoveAt(i);
                         }
@@ -121,16 +125,18 @@ public class MutationCell : MonoBehaviour
         currentSlotSelectionId--;
         selectAnimElapsedTime=0;
           ChangeSelectionProprites();
+          PlaySound(changeSelection);   
         }
         if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow))
         {
+        PlaySound(changeSelection);
         currentSlotSelectionId++;
         selectAnimElapsedTime=0;
         ChangeSelectionProprites();
         }
         if(Input.GetKeyDown(KeyCode.Space)||Input.GetButtonDown("Fire1"))
         {
-
+            
             SelectModule(itens[currentSlotSelectionId]);
     
         }
@@ -139,7 +145,7 @@ public class MutationCell : MonoBehaviour
     void SelectModule (ItemDrop.Item item )
     {
         moduleMananger.CurrentModules[currentSlotSelectionId].items.Add(itens[currentSlotSelectionId]);
-        Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,Quaternion.identity);
+        Instantiate(itens[currentSlotSelectionId].itemObject,slotIten[currentSlotSelectionId].transform.position,itens[currentSlotSelectionId].itemObject.transform.rotation);
         slotItenMeshFilter[currentSlotSelectionId].sharedMesh = null;
         slotItenMeshRenderer[currentSlotSelectionId].sharedMaterial = null;
         canSelectModules = false;
@@ -150,10 +156,12 @@ public class MutationCell : MonoBehaviour
          player.transform.SetParent(null);
          player.transform.localPosition = new Vector3(transform.position.x + (transform.localScale.x/2),transform.position.y,0);
         moduleSelected = true;
+        PlaySound(select);
 
     }
     void ChangeSelectionProprites()
     {
+        
         currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,slotIten.Length-1);
         descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itemDescription;
        
@@ -187,4 +195,8 @@ public class MutationCell : MonoBehaviour
             ChangeSelectionProprites();
         }
     }
+    void PlaySound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
+	}
 }
