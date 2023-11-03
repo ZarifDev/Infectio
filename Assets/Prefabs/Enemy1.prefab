@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaAtual: 4
-  vidaMaxima: 3
+  vidaMaxima: 4
   custoParaSerSpawnado: 1
   deathSound: {fileID: 8300000, guid: 1d659791828b8eb4cb77398ea9c20068, type: 3}
   vidaPrefab: {fileID: 1130042488011640330, guid: c405dce2e499c9e40bde6f940ed4a9d7, type: 3}

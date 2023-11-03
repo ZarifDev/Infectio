@@ -51,6 +51,7 @@ public class PlayerShooting : MonoBehaviour {
 		if(Input.GetButtonUp("Fire1"))
 			{	
 			currentQuickFireDelay = quickFireDelayDecrease;
+			audioSource.pitch =1;
 			}
 		
 		if( Input.GetButton("Fire1") && cooldownTimer <= 0 && currentAmmo >0 && !isReloading) {

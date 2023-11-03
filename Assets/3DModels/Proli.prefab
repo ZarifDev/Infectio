@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 07751217af982af40bc25f065e13cac7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c333e7c64949c4877a091bafdfa73ace, type: 2}
+      objectReference: {fileID: 2100000, guid: dd0f7811974ab064081367e2adfbc009, type: 2}
     - target: {fileID: 919132149155446097, guid: 07751217af982af40bc25f065e13cac7, type: 3}
       propertyPath: m_Name
       value: VirusDefaultHead

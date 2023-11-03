@@ -77,7 +77,7 @@ public class FirstBoss : MonoBehaviour
         else
         {
             currentLife = 0;
-            Die();
+           Die();
         }
     lifeSlider.value = currentLife;
 }
@@ -93,4 +93,5 @@ public class FirstBoss : MonoBehaviour
        lifeSlider.gameObject.SetActive(false);
       Destroy(this.gameObject);
     }
+    
 }

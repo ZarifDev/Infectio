@@ -205,10 +205,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waves: 4
-  totalPointsToSpendWithSpawn: 3
+  totalPointsToSpendWithSpawn: 5
   enemies:
   - {fileID: 1597467251267362135, guid: 09d1f21fd2ef2cd4aada768b8b7a0483, type: 3}
   - {fileID: 3800022653265940681, guid: 0ec5673b066176e44aa063783e055e7d, type: 3}
+  boss: {fileID: 0}
   spawnPoints:
   - {fileID: 6682006081756086239}
   - {fileID: 8095317866956418470}
