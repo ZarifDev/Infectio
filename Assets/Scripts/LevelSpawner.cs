@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class LevelSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,10 +13,11 @@ public class LevelSpawner : MonoBehaviour
      int[] enemiesSpawnCost;
      [SerializeField] GameObject MutationCell;
     bool bossTime;
-    [SerializeField] public static List<GameObject> enemiesActiveInScene = new List<GameObject>();
+    bool bossIsDead = false;
+    [SerializeField] public static List<GameObject> enemiesActiveInScene;
     void Start()
     {
-       
+       enemiesActiveInScene = new List<GameObject>();
         //seta o tamanho da lista de preço de inimigos para o tamanho da lista de inimgos
         enemiesSpawnCost = new int[enemies.Length];
         for (int i = 0; i < enemies.Length; i++)
@@ -28,7 +28,7 @@ public class LevelSpawner : MonoBehaviour
 
             enemiesSpawnCost[i] = enemies[i].GetComponent<InimigoBase>().custoParaSerSpawnado;
         }
-
+    PriceSpendAjustment();
 
     }
 
@@ -67,17 +67,27 @@ public class LevelSpawner : MonoBehaviour
         StartSpawning();     
      
       }
+    
     if(enemiesActiveInScene.Count ==0 && currentWave > Waves )
     {
+     
         if(boss != null)
         {
             boss.SetActive(true);
-        }else{
-        SceneManager.LoadScene(1);
+        }else if(!bossIsDead)
+        {
+            bossIsDead = true;
+             Invoke("GoToNextScene",2);
         }
     }
    
    
+    }
+      
+    
+    void GoToNextScene()
+    {
+      GameMananger.instance.GoToNextScene();
     }
     void StartSpawning()
     {
@@ -99,14 +109,14 @@ public class LevelSpawner : MonoBehaviour
     void SpawnEnemies()
     {
      int spawnPointId = 0;
-
+     int spawnTries = 0;   
             for (int currentSpentPoints = 0; currentSpentPoints < totalPointsToSpendWithSpawn;currentSpentPoints +=0 )
             {
                 //pega um inimigo aleatório para spawnar
                 int randomEnemyId = Random.Range(0,enemiesSpawnCost.Length);
 
                 // se o custo de spawn desse inimigo não excecer o tanto de pontos que pode gastar com o spawn, ele é instanciado na cena
-                if(currentSpentPoints+ enemiesSpawnCost[randomEnemyId] <= totalPointsToSpendWithSpawn){
+                if(currentSpentPoints+ enemiesSpawnCost[randomEnemyId] <= totalPointsToSpendWithSpawn && spawnPointId <spawnPoints.Length){
             currentSpentPoints += enemiesSpawnCost[randomEnemyId];
 
                 // spawna o inimigo no primeiro ponto
@@ -117,7 +127,30 @@ public class LevelSpawner : MonoBehaviour
                 // faz com que o proximo inimigo seja spawnado no proximo ponto da lista (para que nao ocorra de um inimigo spawnar dentro do outro)
             spawnPointId++;
                 }
+                  spawnTries++;
+                if(spawnTries >= 60){
+                   
+                    Debug.LogError("ajuste o preço do inimigo:"+ enemies[randomEnemyId].name + " para par ou impar dependendo do . Pois meu sistema tem um bug e to com preguiça de arrumar ");
+                     break;
+                }
             }
     }
+    void PriceSpendAjustment()
+    {
+        bool numbersIsOdd;
+        numbersIsOdd = totalPointsToSpendWithSpawn%2 ==0;
+
+          for (int i = 0; i < enemiesSpawnCost.Length; i++)
+        {   
+
+            if(enemiesSpawnCost[i]%2 == 0 && !numbersIsOdd||enemiesSpawnCost[i]%2 == 1  && numbersIsOdd)
+            {
+            totalPointsToSpendWithSpawn++;
+            Debug.LogWarning("O totalPointsToSpendWithSpawn (pontos para spawnar) foi ajustado pois o custo de algum inimigo é par ou impar mas o totalPointsToSpendWithSpawn nao é do mesmo tipo");
+            break;
+            }
+
+        }
     
+}
 }

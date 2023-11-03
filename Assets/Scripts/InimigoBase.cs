@@ -14,6 +14,7 @@ public class InimigoBase : MonoBehaviour
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        vidaAtual = vidaMaxima;
      print(chanceDeDroparVida);
         
     }
