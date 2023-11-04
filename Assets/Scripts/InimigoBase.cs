@@ -61,7 +61,7 @@ public class InimigoBase : MonoBehaviour
         
         if(other.gameObject.tag == "PlayerBullet")
         {
-              playerScript.PlaySound(deathSound);
+              playerScript.PlaySound(hitSound);
             TomarDano(PlayerBullet.damage);
             Destroy(other.gameObject);
         }
