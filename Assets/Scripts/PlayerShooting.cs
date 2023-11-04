@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour {
 
-
+    public Text Nome;
 	public GameObject bulletPrefab;
 	int bulletLayer;
 	public float maxAmmo = 30;
@@ -43,6 +43,8 @@ public class PlayerShooting : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+           Nome = currentAmmo.ToString() + "/" + maxAmmo.ToString();
+
 	 if(Player.playerCantDoNothing == false)
       {
 		cooldownTimer -= Time.deltaTime;
