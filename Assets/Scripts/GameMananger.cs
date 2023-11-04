@@ -35,6 +35,7 @@ public class GameMananger : MonoBehaviour
     {
       Time.timeScale = 0;//pausa o tempo
       gameOverMenu.SetActive(true);
+       Destroy(Player.instance.gameObject);
     }
     public void Pause()
     {
@@ -49,11 +50,15 @@ public class GameMananger : MonoBehaviour
      public void Restart()
     {
 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-SceneManager.LoadScene(1);
+    Destroy(Player.instance.gameObject);
+    SceneManager.LoadScene(1);
     }
     public void MainMenu()
     {
-SceneManager.LoadScene(0);
+        if(Player.instance  != null){
+    Destroy(Player.instance.gameObject);
+        }
+    SceneManager.LoadScene(0);
     }
 
     public void GoToNextScene()
@@ -61,14 +66,15 @@ SceneManager.LoadScene(0);
     int nextSceneNumber = (SceneManager.GetActiveScene().buildIndex)+1;
      if(SceneManager.sceneCountInBuildSettings>nextSceneNumber)
      {
+        DontDestroyOnLoad(Player.instance.gameObject);
         SceneManager.LoadScene(nextSceneNumber);
      }else
      {
-   
+        
         VictoryMenu.SetActive(true);
      }
           print(nextSceneNumber);
         print(SceneManager.sceneCountInBuildSettings);
     }
-
+    
 }

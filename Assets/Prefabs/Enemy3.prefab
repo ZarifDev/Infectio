@@ -366,7 +366,7 @@ MonoBehaviour:
   vidaAtual: 14
   vidaMaxima: 14
   custoParaSerSpawnado: 3
-  deathSound: {fileID: 8300000, guid: 4d3ab8325fa5c384b98cb626f3311fb6, type: 3}
+  deathSound: {fileID: 8300000, guid: 1d659791828b8eb4cb77398ea9c20068, type: 3}
   vidaPrefab: {fileID: 1130042488011640330, guid: c405dce2e499c9e40bde6f940ed4a9d7, type: 3}
 --- !u!135 &2571187243085714384
 SphereCollider:

@@ -24,7 +24,7 @@ public class Adversarios : MonoBehaviour
     {
        
         Atirar();
-         if(atirarNoJogador)
+         if(atirarNoJogador &&player)
         {
       Arma.transform.rotation = Quaternion.FromToRotation(Vector3.left,  player.transform.position - transform.position);
         }
