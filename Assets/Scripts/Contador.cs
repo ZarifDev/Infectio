@@ -19,7 +19,7 @@ public floar pt;
     {
         pontos.text = "Score:"+pt.ToString();
 
-        if (Input.GetKeyDow(KeyCode.P))
+        if (Input.GetKeyDow(KeyCode.P));
         {
             PT++;
         }
