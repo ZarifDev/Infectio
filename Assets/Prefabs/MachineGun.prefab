@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3769013054541384368, guid: e0fd6213c40b1b0458a77111b2c2f92c, type: 3}
-  maxAmmo: 25
+  maxAmmo: 40
   currentAmmo: 0
   reloadTime: 4
   isReloading: 0

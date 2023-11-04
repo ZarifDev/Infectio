@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerShooting : MonoBehaviour {
-
 
 	public GameObject bulletPrefab;
 	int bulletLayer;
@@ -65,6 +65,7 @@ public class PlayerShooting : MonoBehaviour {
 		}
 		reloadSlider.gameObject.SetActive(isReloading);
 	}
+	
 	}
 	void ReloadGun()
 	{

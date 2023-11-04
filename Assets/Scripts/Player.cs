@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
       Time.timeScale = 1;
       print("started");
       vidaAtual = vidaMaxima;
+      lifeSlider = GameObject.Find("PlayerLife").GetComponent<Slider>();
       audioSource = GetComponent<AudioSource>();
      
     }
@@ -54,6 +55,13 @@ public class Player : MonoBehaviour
        vidaMaxima =99999;
        vidaAtual =vidaMaxima;
       }
+       lifeSlider.value = vidaAtual;
+        lifeSlider.maxValue = vidaMaxima;
+        if(!lifeSlider)
+        {
+              lifeSlider = GameObject.Find("PlayerLife").GetComponent<Slider>();
+              reloadSlider = GameObject.Find("ReloadSlider").GetComponent<Slider>();
+        }
     }
     
     public void Cura(float vidaParaCurar)
@@ -65,7 +73,7 @@ public class Player : MonoBehaviour
         {
              vidaAtual += vidaParaCurar;
         }
-          lifeSlider.value = vidaAtual;
+         
     }
     public void  TakeDamage(float QuantidadeDeDano)
     {
