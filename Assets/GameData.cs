@@ -14,7 +14,7 @@ public class GameData : MonoBehaviour
       }else
       {
        instance =this;
-       DontDestroyOnLoad(Player.instance.gameObject);
+       DontDestroyOnLoad(instance.gameObject);
       }
        
     }
