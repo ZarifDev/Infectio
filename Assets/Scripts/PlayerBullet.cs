@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerBullet : MonoBehaviour
 {
   
@@ -11,6 +10,7 @@ public class PlayerBullet : MonoBehaviour
     public static float lifeTime= 3;
     public static float damage = 1;
      public static float speedIncrease;
+     
     
 
 
