@@ -66,7 +66,7 @@ public class InimigoBase : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-   
+    
 }
 
 
