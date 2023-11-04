@@ -214,6 +214,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 56194658913447105, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 456308447588217314, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 970871201562708429, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -222,6 +230,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1170170538396534897, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 1843820056300214857, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 2217163279586273238, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 2590507264944455569, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -234,6 +254,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2916871164627462272, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 2944237644577938822, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -366,10 +390,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 7522984079173345854, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 756535639}
+    - target: {fileID: 8386819730416029889, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 8638118815857198601, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 8795681816852178863, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 9093357815189760025, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 9094003917056710217, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
