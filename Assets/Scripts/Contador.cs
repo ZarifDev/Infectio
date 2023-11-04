@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Contador : MonoBehaviour
+public class Contador : MonoBehaviour{
 
 public Text pontos;
-public floar pt;
-{
+public float pt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,9 @@ public floar pt;
     {
         pontos.text = "Score:"+pt.ToString();
 
-        if (Input.GetKeyDow(KeyCode.P));
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            PT++;
+            pt++;
         }
     }
 }
