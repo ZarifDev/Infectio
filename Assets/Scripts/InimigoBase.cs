@@ -6,6 +6,7 @@ public class InimigoBase : MonoBehaviour
     public float vidaMaxima = 3;
     public int custoParaSerSpawnado = 1;
     public AudioClip deathSound;
+    public AudioClip hitSound;
     public GameObject vidaPrefab; // refer. ao ao prefab do item de vida
     Player playerScript;
     public static bool chanceDeDroparVida = false;
@@ -46,7 +47,7 @@ public class InimigoBase : MonoBehaviour
 
     bool DeveDroparVida()
     {
-        float chance = 10f;
+        float chance = 25f;
         float sorteio = Random.Range(0f, 100f);
         if(sorteio <= chance)
         {
@@ -57,8 +58,10 @@ public class InimigoBase : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other) {
+        
         if(other.gameObject.tag == "PlayerBullet")
         {
+              playerScript.PlaySound(deathSound);
             TomarDano(PlayerBullet.damage);
             Destroy(other.gameObject);
         }
