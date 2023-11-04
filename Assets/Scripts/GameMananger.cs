@@ -50,7 +50,9 @@ public class GameMananger : MonoBehaviour
      public void Restart()
     {
 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      if(Player.instance  != null){
     Destroy(Player.instance.gameObject);
+        }
     SceneManager.LoadScene(1);
     }
     public void MainMenu()
