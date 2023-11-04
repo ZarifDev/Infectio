@@ -10,6 +10,8 @@ public class PlayerBullet : MonoBehaviour
     public static float lifeTime= 3;
     public static float damage = 1;
      public static float speedIncrease;
+     
+    
 
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class PlayerBullet : MonoBehaviour
     void Update()
     {   
          transform.Translate(Vector3.right * Time.deltaTime*(speed+speedIncrease)); 
+         
     }
     void StopBullet()
     {
