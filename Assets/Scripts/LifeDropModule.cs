@@ -17,4 +17,8 @@ public class LifeDropModule : MonoBehaviour
     {
         
     }
+    private void OnDestroy() {
+    InimigoBase.chanceDeDroparVida = false;
+
+    }
 }

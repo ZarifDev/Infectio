@@ -16,5 +16,9 @@ public class ModuloVida : MonoBehaviour
         playerScript.vidaMaxima += maxlifeIcrease;
         playerScript.Cura(playerScript.vidaMaxima);
     }
+    private void OnDestroy() {
+    InimigoBase.chanceDeDroparVida = false;
+    playerScript.vidaMaxima -= maxlifeIcrease;
+    }
 
 }
