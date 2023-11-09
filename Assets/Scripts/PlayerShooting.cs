@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerShooting : MonoBehaviour {
 
+    public Text contador;
 	public GameObject bulletPrefab;
 	int bulletLayer;
 	public float maxAmmo = 30;
@@ -26,7 +27,7 @@ public class PlayerShooting : MonoBehaviour {
 	AudioSource audioSource;
 	public AudioClip shootSound;
 	public AudioClip reloadSound;
-	void Start() {
+	void Awake() {
 		audioSource = GetComponent<AudioSource>();
 		PlayerBullet.damage = damage;
 		PlayerBullet.lifeTime = bulletLifeTime;
@@ -42,7 +43,17 @@ public class PlayerShooting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
+	
+	if(contador != null){
+    contador.text = "Ammo: "+ currentAmmo.ToString() + "/"+ maxAmmo.ToString();
+	}else
+	{
+	contador = GameObject.Find("Contador").GetComponent<Text>();
+	}
+
+
+
 	 if(Player.playerCantDoNothing == false)
       {
 		cooldownTimer -= Time.deltaTime;
