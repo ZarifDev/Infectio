@@ -191,6 +191,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virus
       objectReference: {fileID: 0}
+    - target: {fileID: 9073472204536398915, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: maxAmmo
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073472204536398915, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: contador
+      value: 
+      objectReference: {fileID: 1900044275}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6071,6 +6079,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868721237}
   m_Mesh: {fileID: 289301614986012343, guid: 4748be31000c6cb4a8749fb99453cf8b, type: 3}
+--- !u!114 &1900044275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4377665839277253479, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+  m_PrefabInstance: {fileID: 1731511975787710056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2026650705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3955543509135884925, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
@@ -6129,6 +6148,7 @@ MonoBehaviour:
   gameOverMenu: {fileID: 1498385887}
   PauseMenu: {fileID: 1821058272}
   VictoryMenu: {fileID: 924783303}
+  paused: 0
 --- !u!1001 &1731511975787710056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6302,8 +6322,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 397204451}
     - target: {fileID: 5953383462915518564, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 141.20001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953383462915518564, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 15.871994
+      value: 15.872009
       objectReference: {fileID: 0}
     - target: {fileID: 6619807414079961776, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

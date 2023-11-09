@@ -46,10 +46,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.Escape))
-      {
-       GameMananger.instance.Pause();
-      }
        if(Input.GetKeyDown(KeyCode.V))
       {
        vidaMaxima =99999;

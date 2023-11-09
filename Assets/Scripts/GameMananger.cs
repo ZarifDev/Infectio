@@ -10,6 +10,7 @@ public class GameMananger : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject PauseMenu;
     public GameObject VictoryMenu;
+    public bool paused;
     void Awake()
     {
     
@@ -28,8 +29,20 @@ public class GameMananger : MonoBehaviour
     VictoryMenu = GameObject.Find("VictoryMenu");
     gameOverMenu.SetActive(false);
      VictoryMenu.SetActive(false);
-    print("s");
     Resume();
+    }
+    void Update()
+    {
+
+    if(Input.GetKeyDown(KeyCode.Escape))
+      {
+        if(!paused){
+        Pause();
+        }else
+        {
+        Resume();
+        }
+      }
     }
      public void GameOver()
     {
@@ -41,15 +54,17 @@ public class GameMananger : MonoBehaviour
     {
     Time.timeScale = 0;
     PauseMenu.SetActive(true);
+    paused = true;
     }
     public void Resume()
     {
     Time.timeScale = 1;
-      PauseMenu.SetActive(false);
+    PauseMenu.SetActive(false);
+    paused = false;
     }
      public void Restart()
     {
-//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
       if(Player.instance  != null){
     Destroy(Player.instance.gameObject);
         }
