@@ -27,5 +27,8 @@ public class SizeModule : MonoBehaviour
           currentBulletLifeTime =  PlayerBullet.lifeTime;
         }
     }
+    private void OnDestroy() {
+    playerTransform.localScale = Vector3.one;
+    }
 
 }
