@@ -180,6 +180,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2026650705}
     - target: {fileID: 2706341635465325798, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: playerHeal
+      value: 
+      objectReference: {fileID: 8300000, guid: 93bebcc962018a1438078bf44803e944, type: 3}
+    - target: {fileID: 2706341635465325798, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: gameOverMenu
       value: 
       objectReference: {fileID: 1498385887}
@@ -6193,14 +6197,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2122860032}
-    - target: {fileID: 2600134389538599748, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -49.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600134389538599748, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -3.466
-      objectReference: {fileID: 0}
     - target: {fileID: 2916871164627462272, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_FontData.m_Font
       value: 

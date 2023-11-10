@@ -2377,8 +2377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -249, y: 111.73}
-  m_SizeDelta: {x: 307.828, y: 131.546}
+  m_AnchoredPosition: {x: -354.25, y: 111.84}
+  m_SizeDelta: {x: 441.49, y: 131.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114531099
 MonoBehaviour:
@@ -2645,8 +2645,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.9
-  m_fontSizeBase: 63.9
+  m_fontSize: 52.93
+  m_fontSizeBase: 52.93
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2910,7 +2910,7 @@ GameObject:
   - component: {fileID: 1432227781}
   - component: {fileID: 1432227780}
   m_Layer: 5
-  m_Name: iNFO
+  m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,10 +2931,10 @@ RectTransform:
   - {fileID: 1266267028}
   m_Father: {fileID: 835707348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -631, y: 111.73}
-  m_SizeDelta: {x: 144.464, y: 131.55}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -64, y: -64}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432227780
 MonoBehaviour:
