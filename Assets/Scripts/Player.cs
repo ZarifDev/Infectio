@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public static AudioSource audioSource;
     bool isInvencible;
     public AudioClip playerHit;
+    public AudioClip playerHeal;
     public static Player instance;
 
      private void Awake() 
@@ -30,10 +31,7 @@ public class Player : MonoBehaviour
        instance =this;
       
       }
-    }
-    
-    void Start()
-    {
+  
       Time.timeScale = 1;
       print("started");
       vidaAtual = vidaMaxima;
@@ -63,6 +61,7 @@ public class Player : MonoBehaviour
     public void Cura(float vidaParaCurar)
     {
         //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
+        PlaySound(playerHeal);
         if(vidaAtual + vidaParaCurar > vidaMaxima){
         vidaAtual = vidaMaxima;
         }else
