@@ -572,7 +572,7 @@ MonoBehaviour:
   lifeSlider: {fileID: 0}
   reloadSlider: {fileID: 2473969523666904895}
   playerHit: {fileID: 8300000, guid: a54879ff415598143b974c0815c39a8a, type: 3}
-  gameOverMenu: {fileID: 0}
+  playerHeal: {fileID: 8300000, guid: 93bebcc962018a1438078bf44803e944, type: 3}
 --- !u!114 &-4950018290596156954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,8 +1029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64fac19617004b40a0a194c4bb675b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: {fileID: 0}
   bulletPrefab: {fileID: 3769013054541384368, guid: e0fd6213c40b1b0458a77111b2c2f92c, type: 3}
-  maxAmmo: 10
+  maxAmmo: 20
   currentAmmo: 0
   reloadTime: 1
   isReloading: 0

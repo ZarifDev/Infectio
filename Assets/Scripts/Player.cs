@@ -35,8 +35,7 @@ public class Player : MonoBehaviour
       Time.timeScale = 1;
       print("started");
       vidaAtual = vidaMaxima;
-      lifeSlider = GameObject.Find("PlayerLife").GetComponent<Slider>();
-      audioSource = GetComponent<AudioSource>();
+
      
     }
    
@@ -44,6 +43,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(!audioSource)
+      {
+          audioSource = GetComponent<AudioSource>();
+      }
        if(Input.GetKeyDown(KeyCode.V))
       {
        vidaMaxima =99999;
