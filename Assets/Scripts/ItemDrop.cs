@@ -5,18 +5,18 @@ using UnityEngine;
 public class ItemDrop : MonoBehaviour
 {
     [System.Serializable]
-    public class Item // Classe representando um item
+    public class Item 
     {
-        public string name = "A common Item"; // Nome padrão do item
-        public GameObject itemObject; // Objeto do item
-        public GameObject itemIconPrefab; // icone do item
-        public string itemDescription = "This is a helpful item"; // Descrição do item
+        public string name = "A common Item"; 
+        public GameObject itemObject;
+        public GameObject itemIconPrefab; 
+        public string itemDescription = "This is a helpful item"; 
     }
 
     [System.Serializable]
-    public class ModulesPart // Classe representando um modulo que contem uma lista de itens
+    public class ModulesPart 
     {
-        public string name = "VirusModule"; // Nome do modulo
+        public string name = "VirusModule"; 
         public List<Item> items; // Lista de itens no modulo
     }
 

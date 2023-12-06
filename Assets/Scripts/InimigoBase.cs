@@ -46,8 +46,8 @@ public class InimigoBase : MonoBehaviour
 
     bool DeveDroparVida()
     {
-        float chance = 12f;
-        float sorteio = Random.Range(0f, 100f);
+        int chance = 10;
+        int sorteio = Random.Range(0, 100);
         if(sorteio <= chance)
         {
             return true;

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f18ceb859136f04badccece32a0964f, type: 2}
+  - {fileID: 2100000, guid: 5fe44792f9bb5ec41bd35cfde1f8fef2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f18ceb859136f04badccece32a0964f, type: 2}
+  - {fileID: 2100000, guid: 5fe44792f9bb5ec41bd35cfde1f8fef2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,8 +331,8 @@ MonoBehaviour:
   vidaAtual: 4
   vidaMaxima: 4
   custoParaSerSpawnado: 1
-  deathSound: {fileID: 8300000, guid: 1d659791828b8eb4cb77398ea9c20068, type: 3}
-  hitSound: {fileID: 8300000, guid: a363f04f432bdc14a979bf780a559dde, type: 3}
+  deathSound: {fileID: 8300000, guid: d07b06c8414b701408b01c11e42cdca4, type: 3}
+  hitSound: {fileID: 8300000, guid: 1d659791828b8eb4cb77398ea9c20068, type: 3}
   vidaPrefab: {fileID: 1130042488011640330, guid: c405dce2e499c9e40bde6f940ed4a9d7, type: 3}
 --- !u!135 &5385921157819700309
 SphereCollider:

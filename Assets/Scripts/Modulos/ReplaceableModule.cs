@@ -12,6 +12,7 @@ public class ReplaceableModule : MonoBehaviour
             moduleMananger = GameObject.FindGameObjectWithTag("Player").GetComponent<ModuleMananger>();
         }
         moduleMananger.ReplacePlayerCurrentModule(this.gameObject);
+    
     }
 
 }

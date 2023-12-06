@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public AudioClip playerHit;
     public AudioClip playerHeal;
     public static Player instance;
-
+    ModuleMananger moduleMananger;
      private void Awake() 
     {
       if(instance != null && instance != this)
@@ -34,8 +34,7 @@ public class Player : MonoBehaviour
   
       Time.timeScale = 1;
       print("started");
-      vidaAtual = vidaMaxima;
-
+      
      
     }
    
@@ -59,19 +58,31 @@ public class Player : MonoBehaviour
               lifeSlider = GameObject.Find("PlayerLife").GetComponent<Slider>();
               reloadSlider = GameObject.Find("ReloadSlider").GetComponent<Slider>();
         }
+        if(!moduleMananger)
+        {
+          moduleMananger = GetComponent<ModuleMananger>();
+        }
+    }
+    void Start()
+    {
+      InitialUpgrade();
+      vidaAtual = vidaMaxima;
+
     }
     
     public void Cura(float vidaParaCurar)
     {
         //aumenta  a vida atual do player quandoa vida dele estive menor que avida maxima
-        PlaySound(playerHeal);
+   
         if(vidaAtual + vidaParaCurar > vidaMaxima){
         vidaAtual = vidaMaxima;
         }else
         {
              vidaAtual += vidaParaCurar;
         }
-         
+          lifeSlider.value = vidaAtual;
+        lifeSlider.maxValue = vidaMaxima;
+             PlaySound(playerHeal);
     }
     public void  TakeDamage(float QuantidadeDeDano)
     {
@@ -111,6 +122,13 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
               
           }
+          
+          if(other.gameObject.tag == "BossBullet")
+          {
+            TakeDamage(2);
+            Destroy(other.gameObject);
+              
+          }
         }
     
     public void PlaySound(AudioClip clip)
@@ -120,6 +138,13 @@ public class Player : MonoBehaviour
     void Die()
     {
       GameMananger.instance.GameOver();
+    }
+    void InitialUpgrade()
+    {
+      if(GameData.instance.InitialItem.itemObject != null){
+        print("initialUpgrade");
+         Instantiate(GameData.instance.InitialItem.itemObject,transform.position,GameData.instance.InitialItem.itemObject.transform.rotation);
+      }
     }
    
 }

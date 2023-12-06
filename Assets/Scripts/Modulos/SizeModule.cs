@@ -11,10 +11,10 @@ public class SizeModule : MonoBehaviour
 
    // Start is called before the first frame update
 
-    void Start()
-    {
+    private void OnEnable() {
+
       transform.localScale *= playerSize;
-       playerTransform =  GameObject.FindGameObjectWithTag("Player").transform;
+       playerTransform = Player.instance.transform;
          playerTransform.localScale *= playerSize;
     }
 
