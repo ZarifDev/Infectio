@@ -226,6 +226,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 534651342}
+        m_TargetAssemblyTypeName: GameData, Assembly-CSharp
+        m_MethodName: changeVolumeData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &76899720
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +668,13 @@ MonoBehaviour:
       itemObject: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
       itemIconPrefab: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
       itemDescription: ' lots of bullets, high firerate but takes longer to reload'
-  AllUnlockedGameItems: []
+  AllUnlockedGameItems:
+  - name: 
+    items: []
+  - name: 
+    items: []
+  - name: 
+    items: []
   InitialItem:
     name: A common Item
     itemObject: {fileID: 0}
@@ -738,6 +756,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444916270}
   m_CullTransparentMesh: 1
+--- !u!114 &534651342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+  m_PrefabInstance: {fileID: 759495943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a81763414427a747b0c753444272411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &562193477
 GameObject:
   m_ObjectHideFlags: 0

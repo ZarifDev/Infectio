@@ -6,6 +6,7 @@ public class GameData : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GameData instance;
+    AudioListener audioListener;
     public List<ItemDrop.ModulesPart> AllGameItems;
     public List<ItemDrop.ModulesPart> AllUnlockedGameItems;
     public ItemDrop.Item InitialItem;
@@ -50,5 +51,8 @@ public class GameData : MonoBehaviour
         }
     }
 
-    
+    public void changeVolumeData()
+    {
+
+    }
 }

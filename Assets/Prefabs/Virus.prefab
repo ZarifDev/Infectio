@@ -845,7 +845,6 @@ GameObject:
   - component: {fileID: 4676053340795368581}
   - component: {fileID: 6450343116275126789}
   - component: {fileID: 7609904021206358025}
-  - component: {fileID: 2227372033287285234}
   m_Layer: 0
   m_Name: DeafaultHeadModule
   m_TagString: HeadModule
@@ -928,18 +927,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6b383c00a1e7e7458acf7da4f176955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2227372033287285234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5837959511815702459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20afc7b20b39f3647999b9af42938b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5938045415009914052

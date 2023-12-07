@@ -20,7 +20,7 @@ public class InitialModuleSelector : MonoBehaviour
     [SerializeField] bool canSelectModules = true;
     bool moduleSelected;
     ModuleMananger moduleMananger;
-    AudioSource audioSource;
+     [SerializeField]AudioSource audioSource;
     [SerializeField] AudioClip changeSelection;
     [SerializeField] AudioClip nullSelection;
     [SerializeField] AudioClip select;
@@ -102,10 +102,10 @@ public class InitialModuleSelector : MonoBehaviour
                 // print(ItenIcon);
              
         }   
-           for (int i = unlockedItens.Count; i < lockedItens.Count; i++)
+           for (int i = 0; i < lockedItens.Count; i++)
         {
 
-       slotItenMeshFilter[i].sharedMesh = lockedItens[i].itemIconPrefab.GetComponent<MeshFilter>().sharedMesh;
+       slotItenMeshFilter[unlockedItens.Count+i].sharedMesh = lockedItens[i].itemIconPrefab.GetComponent<MeshFilter>().sharedMesh;
       // slotItenMeshRenderer[i].sharedMaterial = unlockedItens[i].itemIconPrefab.GetComponent<MeshRenderer>().sharedMaterial;
                 // print(ItenIcon);
              
