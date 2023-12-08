@@ -160,10 +160,15 @@ public class MutationCell : MonoBehaviour
 
     }
     void ChangeSelectionProprites()
-    {
-        
+    {   
+        currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,2);
+        if(PlayerPrefs.HasKey(itens[currentSlotSelectionId].itemObject.name+"(Clone)")){
         currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,slotIten.Length-1);
         descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itemDescription;
+        }else
+        {
+             descriptionText.text =  "<b>"+ "mysterious mutation" + "</b>"+ "</b>"+"select to unlock it "+"<br>";
+        }
        
         
     }

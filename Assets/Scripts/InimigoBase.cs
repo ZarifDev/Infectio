@@ -41,6 +41,9 @@ public class InimigoBase : MonoBehaviour
             Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posi��o do inimigo
         }
         LevelSpawner.enemiesActiveInScene.Remove(gameObject);
+         if(LevelSpawner.enemiesActiveInScene.Count <1){
+            Score.instance.AddScore(1500);
+            }
         Destroy(gameObject);
     }
 

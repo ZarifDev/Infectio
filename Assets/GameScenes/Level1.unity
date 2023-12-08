@@ -5430,7 +5430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1748374815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5451,7 +5451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +1500
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37f93ae9a2550094fae66458c661c1aa, type: 2}
   m_sharedMaterial: {fileID: 8095830392670645261, guid: 37f93ae9a2550094fae66458c661c1aa, type: 2}
@@ -5478,8 +5478,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5596,7 +5596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623c921344438eb48921ffb2edf83b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableTime: 1
+  disableTime: 3
+  textMesh: {fileID: 1748374815}
 --- !u!95 &1748374819
 Animator:
   serializedVersion: 5
@@ -5650,6 +5651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2072645966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673034981827125767, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+  m_PrefabInstance: {fileID: 1731511975787710056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2122860029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,7 +5703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 1498385887}
   PauseMenu: {fileID: 1821058272}
-  score: {fileID: 0}
+  score: {fileID: 2072645966}
   VictoryMenu: {fileID: 924783303}
   ScoreUp: {fileID: 1748374814}
   paused: 0

@@ -5596,6 +5596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 1
+  textMesh: {fileID: 1627828593}
 --- !u!95 &1627828592
 Animator:
   serializedVersion: 5

@@ -31,10 +31,11 @@ public class GameMananger : MonoBehaviour
     VictoryMenu = GameObject.Find("VictoryMenu");
     if(Score.instance){
     score = Score.instance.gameObject;
+
     }
     gameOverMenu?.SetActive(false);
      VictoryMenu?.SetActive(false);
-     ScoreUp?.SetActive(false);
+  
     Resume();
     }
     void Update()

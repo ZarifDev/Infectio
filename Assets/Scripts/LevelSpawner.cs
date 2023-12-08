@@ -15,6 +15,7 @@ public class LevelSpawner : MonoBehaviour
     bool bossTime;
     bool bossIsDead = false;
     [SerializeField] public static List<GameObject> enemiesActiveInScene;
+
     void Start()
     {
        enemiesActiveInScene = new List<GameObject>();
@@ -63,9 +64,9 @@ public class LevelSpawner : MonoBehaviour
         //se nao tiver inimigos vivos na cena, spawna uma nova quantia deles
       if(enemiesActiveInScene.Count ==0 && currentWave <= Waves)
       {
-        
+    
         StartSpawning();
-       
+        
      
       }
     
@@ -95,9 +96,11 @@ public class LevelSpawner : MonoBehaviour
         if(currentWave == Waves/2 || currentWave ==Waves)
         {
             SpawnMutationCell();
+         
         }else
         {
             SpawnEnemies();
+      
         }
            currentWave++;   
   
@@ -109,10 +112,7 @@ public class LevelSpawner : MonoBehaviour
     }
     void SpawnEnemies()
     {
-    if(currentWave>0)
-    {
-        Score.instance.AddScore(1500);
-    }     
+   
      int spawnPointId = 0;
      int spawnTries = 0;   
             for (int currentSpentPoints = 0; currentSpentPoints < totalPointsToSpendWithSpawn;currentSpentPoints +=0 )

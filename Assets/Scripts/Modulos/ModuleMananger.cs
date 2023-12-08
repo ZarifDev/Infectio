@@ -104,6 +104,7 @@ public class ModuleMananger : MonoBehaviour
             CurrentUnlockedModules.Add(GameData.instance.AllGameItems[ModuleTypeId].items[i]);
             PlayerPrefs.SetString(moduleToCheckName,"Unlocked");
             print(GameData.instance.AllGameItems[ModuleTypeId].items[i].itemObject.name+ ", now is unlocked");
+            Score.instance.AddScore(0);
             break;
             }
         }

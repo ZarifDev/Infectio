@@ -8,13 +8,18 @@ public class ScoreUpText : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] float disableTime;
     public static int scoreValue = 1500;
-    TextMeshPro textMesh;
+    [SerializeField]TextMeshPro textMesh;
     void OnEnable()
     {
-
+        
         Invoke("Disable",disableTime);
-        textMesh.text = scoreValue.ToString();
-        Score.instance.currentScore += scoreValue;
+        if(scoreValue>0){
+        textMesh.text = "+"+scoreValue.ToString();
+        }else
+        {
+            textMesh.text = "New Module Unlocked";
+        }
+
     }
 
     // Update is called once per frame
