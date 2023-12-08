@@ -64,7 +64,8 @@ public class LevelSpawner : MonoBehaviour
       if(enemiesActiveInScene.Count ==0 && currentWave <= Waves)
       {
         
-        StartSpawning();     
+        StartSpawning();
+       
      
       }
     
@@ -108,6 +109,10 @@ public class LevelSpawner : MonoBehaviour
     }
     void SpawnEnemies()
     {
+    if(currentWave>0)
+    {
+        Score.instance.AddScore(1500);
+    }     
      int spawnPointId = 0;
      int spawnTries = 0;   
             for (int currentSpentPoints = 0; currentSpentPoints < totalPointsToSpendWithSpawn;currentSpentPoints +=0 )

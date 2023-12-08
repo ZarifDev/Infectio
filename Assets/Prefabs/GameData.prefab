@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5915148069652884588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7218181443228491011}
+  - component: {fileID: 837576459507051081}
+  - component: {fileID: 2919058456821161829}
+  m_Layer: 0
+  m_Name: GameData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7218181443228491011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915148069652884588}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 333.5, y: 187.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &837576459507051081
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915148069652884588}
+  m_Enabled: 1
+--- !u!114 &2919058456821161829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915148069652884588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a81763414427a747b0c753444272411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllGameItems:
+  - name: ModulosDeVida
+    items:
+    - name: Max life Increase
+      itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
+      itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
+      itemDescription: Increasse de maximum health
+    - name: Vampirism
+      itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
+      itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
+      itemDescription: ' Enemies have a chance to drop health when die'
+    - name: LevelHeal
+      itemObject: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+      itemIconPrefab: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+      itemDescription: Heals all life in next level
+  - name: ModulosDeCorpo
+    items:
+    - name: Collar
+      itemObject: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
+      itemIconPrefab: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
+      itemDescription: Increase virus Speed
+    - name: Low Body
+      itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
+      itemDescription: Deacrease Virus Size in 25% but bullets has less range
+  - name: ModulosDeTIro
+    items:
+    - name: Reload Module
+      itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
+      itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
+      itemDescription: Decrease gun reload time
+    - name: ShotGun
+      itemObject: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
+      itemIconPrefab: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
+      itemDescription: high damage and short range
+    - name: MachineGun
+      itemObject: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
+      itemIconPrefab: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
+      itemDescription: ' lots of bullets, high firerate but takes longer to reload'
+  AllUnlockedGameItems:
+  - name: ModulosDeVida
+    items:
+    - name: LevelHeal
+      itemObject: {fileID: 0}
+      itemIconPrefab: {fileID: 0}
+      itemDescription: Heals all life in next level
+  - name: ModulosDeCorpo
+    items: []
+  - name: ModulosDeTIro
+    items: []
+  InitialItem:
+    name: A common Item
+    itemObject: {fileID: 0}
+    itemIconPrefab: {fileID: 0}
+    itemDescription: This is a helpful item
+  InitialItemId: 0

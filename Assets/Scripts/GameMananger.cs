@@ -9,7 +9,9 @@ public class GameMananger : MonoBehaviour
     public static GameMananger instance;
     public GameObject gameOverMenu;
     public GameObject PauseMenu;
+     public GameObject score;
     public GameObject VictoryMenu;
+    public GameObject ScoreUp;
     public bool paused;
     void Awake()
     {
@@ -27,8 +29,12 @@ public class GameMananger : MonoBehaviour
     gameOverMenu = GameObject.Find("GameOverMenu");
     PauseMenu = GameObject.Find("PauseMenu");
     VictoryMenu = GameObject.Find("VictoryMenu");
-    gameOverMenu.SetActive(false);
-     VictoryMenu.SetActive(false);
+    if(Score.instance){
+    score = Score.instance.gameObject;
+    }
+    gameOverMenu?.SetActive(false);
+     VictoryMenu?.SetActive(false);
+     ScoreUp?.SetActive(false);
     Resume();
     }
     void Update()
@@ -42,6 +48,10 @@ public class GameMananger : MonoBehaviour
         {
         Resume();
         }
+      }
+      if(Input.GetKeyDown(KeyCode.Delete))
+      {
+    PlayerPrefs.DeleteAll();
       }
     }
      public void GameOver()
@@ -59,7 +69,7 @@ public class GameMananger : MonoBehaviour
     public void Resume()
     {
     Time.timeScale = 1;
-    PauseMenu.SetActive(false);
+    PauseMenu?.SetActive(false);
     paused = false;
     }
      public void Restart()
@@ -74,6 +84,7 @@ public class GameMananger : MonoBehaviour
     {
         if(Player.instance  != null){
     Destroy(Player.instance.gameObject);
+    Destroy(score);
         }
     SceneManager.LoadScene(0);
     }
@@ -83,12 +94,15 @@ public class GameMananger : MonoBehaviour
     int nextSceneNumber = (SceneManager.GetActiveScene().buildIndex)+1;
      if(SceneManager.sceneCountInBuildSettings>nextSceneNumber)
      {
+      if(Player.instance){
         DontDestroyOnLoad(Player.instance.gameObject);
+        DontDestroyOnLoad(score);
+      }
         SceneManager.LoadScene(nextSceneNumber);
      }else
      {
         
-        VictoryMenu.SetActive(true);
+        VictoryMenu?.SetActive(true);
      }
           print(nextSceneNumber);
         print(SceneManager.sceneCountInBuildSettings);

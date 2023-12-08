@@ -13,6 +13,7 @@ public class AdditionalModule : MonoBehaviour
             moduleMananger = GameObject.FindGameObjectWithTag("Player").GetComponent<ModuleMananger>();
         }
         moduleMananger.AddModuleToPlayer(this.gameObject);
+    
     }
 
     // Update is called once per frame
