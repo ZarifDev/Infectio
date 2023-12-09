@@ -167,7 +167,7 @@ public class MutationCell : MonoBehaviour
         descriptionText.text =  "<b>"+itens[currentSlotSelectionId].name + "</b>" +"<br>" + itens[currentSlotSelectionId].itemDescription;
         }else
         {
-             descriptionText.text =  "<b>"+ "mysterious mutation" + "</b>"+ "</b>"+"select to unlock it "+"<br>";
+             descriptionText.text =  "<b>Mysterious Mutation</b>" + "<br>" +"select to unlock it" ;
         }
        
         
