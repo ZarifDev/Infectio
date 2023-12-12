@@ -103,6 +103,7 @@ public class PlayerShooting : MonoBehaviour {
 
 			for (int i = 0; i < firePoints.Length; i++)
 			{
+				playerScript.muzzleFlash.Play();
 			float bulletVariation = Random.Range(-precisionVariation,precisionVariation);
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoints[i].transform.position,Quaternion.Euler(0,0,firePoints[i].rotation.eulerAngles.z + bulletVariation));
 			}

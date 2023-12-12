@@ -22,6 +22,7 @@ public class MutationCell : MonoBehaviour
      GameObject player;
     ModuleMananger moduleMananger;
     [SerializeField] GameObject VirusClones;
+     [SerializeField] GameObject particleProli;
     AudioSource audioSource;
       [SerializeField] AudioClip changeSelection;
         [SerializeField] AudioClip select;
@@ -155,7 +156,9 @@ public class MutationCell : MonoBehaviour
         Player.playerCantDoNothing = false;
          player.transform.SetParent(null);
          player.transform.localPosition = new Vector3(transform.position.x + (transform.localScale.x/2),transform.position.y,0);
+           GameObject particle = Instantiate(particleProli, player.transform.position,Quaternion.identity);
         moduleSelected = true;
+
         PlaySound(select);
 
     }

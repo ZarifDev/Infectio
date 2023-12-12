@@ -8,6 +8,9 @@ public class LevelSpawner : MonoBehaviour
     int currentWave;
     public int totalPointsToSpendWithSpawn;
     [SerializeField] GameObject[] enemies;
+    [SerializeField] GameObject obstacle;
+    [SerializeField] Transform [] obstacleSpawnPoints;
+    [SerializeField] float obstacleRate = 3;
     [SerializeField] GameObject boss;
     [SerializeField] Transform [] spawnPoints;
      int[] enemiesSpawnCost;
@@ -30,9 +33,12 @@ public class LevelSpawner : MonoBehaviour
             enemiesSpawnCost[i] = enemies[i].GetComponent<InimigoBase>().custoParaSerSpawnado;
         }
     PriceSpendAjustment();
-
+    InvokeRepeating("SpawnObstacles",0,obstacleRate);
     }
-
+    void GoToNextScene()
+    {
+        GameMananger.instance.GoToNextScene();
+    }
     void Cheats()
     {
         if(Input.GetKeyDown(KeyCode.X)){
@@ -85,11 +91,13 @@ public class LevelSpawner : MonoBehaviour
    
    
     }
-      
-    
-    void GoToNextScene()
+
+    void SpawnObstacles()
     {
-      GameMananger.instance.GoToNextScene();
+        if(enemiesActiveInScene.Count >0)
+        {
+         Instantiate(obstacle,obstacleSpawnPoints[Random.Range(0,2)].position,Quaternion.identity);   
+        }
     }
     void StartSpawning()
     {

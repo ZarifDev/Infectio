@@ -41,6 +41,14 @@ public class ModuleMananger : MonoBehaviour
           ModuleToAdd.transform.localPosition = Vector3.zero;
         ModuleToAdd.transform.localScale = Vector3.one;
     }
+    void Start() 
+    {
+        if(GameData.instance.InitialItem!= null)
+        {
+            CurrentModules[GameData.instance.InitialItemId].items.Add(GameData.instance.InitialItem);
+        }
+        
+    }
      public void ReplacePlayerCurrentModule(GameObject ModuleToRaplace)
     {
        
@@ -51,6 +59,7 @@ public class ModuleMananger : MonoBehaviour
             ModuleToRaplace.transform.SetParent(headModulesLocation);
             Destroy(currentHeadModule);
             currentHeadModule = ModuleToRaplace;
+         
 
         }else if(ModuleToRaplace.tag == "BodyModule")
         {

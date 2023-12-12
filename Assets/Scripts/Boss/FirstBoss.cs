@@ -18,6 +18,7 @@ public class FirstBoss : MonoBehaviour
   public GameObject BulletAttackPattern1;
   public GameObject BulletAttackPattern2;
   public GameObject BulletAttackPattern3;
+  public ParticleSystem hitFlash;
   Transform player;
   bool canStartAttacking;
   void Start()
@@ -84,6 +85,8 @@ public class FirstBoss : MonoBehaviour
   private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "PlayerBullet")
         {
+            hitFlash.transform.position = other.ClosestPoint(other.transform.position);
+            hitFlash.Play();
             TakeDamage(PlayerBullet.damage);
             Destroy(other.gameObject);
         }

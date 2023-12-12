@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public AudioClip playerHit;
     public AudioClip playerHeal;
     public static Player instance;
+    public ParticleSystem muzzleFlash;
     ModuleMananger moduleMananger;
      private void Awake() 
     {
