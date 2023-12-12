@@ -45,9 +45,30 @@ public class ModuleMananger : MonoBehaviour
     {
         if(GameData.instance.InitialItem!= null)
         {
-            CurrentModules[GameData.instance.InitialItemId].items.Add(GameData.instance.InitialItem);
+            addInitalModuleToList();
         }
         
+    }
+    void addInitalModuleToList()
+    {   
+       GameObject ModuleToRaplace = GameData.instance.InitialItem.itemObject;
+
+         if(ModuleToRaplace.tag == "HeadModule")
+        {
+          CurrentModules[0].items.Add(GameData.instance.InitialItem);
+         
+
+        }else if(ModuleToRaplace.tag == "BodyModule")
+        {
+             CurrentModules[1].items.Add(GameData.instance.InitialItem);
+
+        }else if(ModuleToRaplace.tag == "FeetModule")
+        {
+             CurrentModules[2].items.Add(GameData.instance.InitialItem);
+        }else
+        {
+            Debug.LogErrorFormat("!!Atenção!! você precisa colocar uma tag nesse objeto, FeetModule, BodyModule ou HeadModule");
+        }
     }
      public void ReplacePlayerCurrentModule(GameObject ModuleToRaplace)
     {

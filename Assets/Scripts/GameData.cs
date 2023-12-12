@@ -11,6 +11,7 @@ public class GameData : MonoBehaviour
     public List<ItemDrop.ModulesPart> AllUnlockedGameItems;
     public ItemDrop.Item InitialItem;
     public int InitialItemId;
+
   
     void Awake()
     {

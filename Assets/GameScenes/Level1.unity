@@ -6526,13 +6526,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemObject
       value: 
       objectReference: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.data[1].name
+      value: LevelHeal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemIconPrefab
       value: 
       objectReference: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.data[1].itemDescription
+      value: Heals all life in next level
+      objectReference: {fileID: 0}
     - target: {fileID: 5915148069652884588, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: m_Name
       value: GameData
