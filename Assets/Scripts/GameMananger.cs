@@ -12,6 +12,7 @@ public class GameMananger : MonoBehaviour
      public GameObject score;
     public GameObject VictoryMenu;
     public GameObject ScoreUp;
+    public GameObject Settings;
     public bool paused;
     void Awake()
     {
@@ -29,6 +30,7 @@ public class GameMananger : MonoBehaviour
     gameOverMenu = GameObject.Find("GameOverMenu");
     PauseMenu = GameObject.Find("PauseMenu");
     VictoryMenu = GameObject.Find("VictoryMenu");
+    Settings = GameObject.Find("Settings");
     if(Score.instance){
     score = Score.instance.gameObject;
 
@@ -45,6 +47,7 @@ public class GameMananger : MonoBehaviour
       {
         if(!paused){
         Pause();
+         Settings?.SetActive(false);
         }else
         {
         Resume();
@@ -53,6 +56,10 @@ public class GameMananger : MonoBehaviour
       if(Input.GetKeyDown(KeyCode.Delete))
       {
     PlayerPrefs.DeleteAll();
+      }
+      if(Input.GetKeyDown(KeyCode.F2))
+      {
+GoToNextScene();
       }
     }
      public void GameOver()
@@ -63,6 +70,7 @@ public class GameMananger : MonoBehaviour
     }
     public void Pause()
     {
+    Settings.SetActive(false);
     Time.timeScale = 0;
     PauseMenu.SetActive(true);
     paused = true;
@@ -70,7 +78,9 @@ public class GameMananger : MonoBehaviour
     public void Resume()
     {
     Time.timeScale = 1;
+     
     PauseMenu?.SetActive(false);
+
     paused = false;
     }
      public void Restart()

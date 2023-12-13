@@ -428,6 +428,9 @@ MonoBehaviour:
   BulletAttackPattern2: {fileID: 978107738135724779, guid: 7650df424fecf95438390e4e238631f4, type: 3}
   BulletAttackPattern3: {fileID: 0}
   hitFlash: {fileID: 274984361942973508}
+  blood: {fileID: 4149530639866089984, guid: a7b45674b800cfc4a9f16badfe05c7b9, type: 3}
+  epicSound: {fileID: 8300000, guid: b55c836a4469a9b438963304b550aaeb, type: 3}
+  nextLevel: {fileID: 8300000, guid: 13283651e146f3c479647219b28fbcc9, type: 3}
 --- !u!135 &5299166425750956446
 SphereCollider:
   m_ObjectHideFlags: 0

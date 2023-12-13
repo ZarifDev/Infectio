@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
         {
         PlayerPrefs.SetInt("BestScore",currentScore);
         }
-        text.text = "BestScore: "+ PlayerPrefs.GetInt("BestScore").ToString();
+        text.text = "  Best Score:  "+ PlayerPrefs.GetInt("BestScore").ToString();
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class Score : MonoBehaviour
     {
         scoreUp = GameMananger.instance.ScoreUp;
         currentScore += value;
-        text.text = "SCORE: "+currentScore.ToString();
+        text.text = currentScore.ToString();
         ScoreUpText.scoreValue = value;
         scoreUp.SetActive(true);
         if(currentScore > PlayerPrefs.GetInt("BestScore"))

@@ -145,13 +145,17 @@ public class InitialModuleSelector : MonoBehaviour
         GameData.instance.InitialItem = unlockedItens[currentSlotSelectionId];
         GameData.instance.InitialItemId = currentSlotSelectionId;
         PlayerPrefs.SetInt("InitialModule",currentSlotSelectionId);
-        GameMananger.instance.GoToNextScene();
+        Invoke("Gotogame",1);
         PlaySound(select);
       }else
       {
         PlaySound(selectLocked);
       }
 
+    }
+    void Gotogame()
+    {
+         GameMananger.instance.GoToNextScene();
     }
     void ChangeSelectionProprites()
     {    currentSlotSelectionId = Mathf.Clamp(currentSlotSelectionId,0,slotIten.Length-1);

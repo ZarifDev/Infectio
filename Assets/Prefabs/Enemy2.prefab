@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadedoadversario: 3
+  centroDaTelaOffset: 4
 --- !u!114 &4649062142697269464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +174,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 1d659791828b8eb4cb77398ea9c20068, type: 3}
   vidaPrefab: {fileID: 1130042488011640330, guid: c405dce2e499c9e40bde6f940ed4a9d7, type: 3}
   hitFlash: {fileID: 4400800161228437976}
+  blood: {fileID: 4149530639866089984, guid: a7b45674b800cfc4a9f16badfe05c7b9, type: 3}
 --- !u!135 &593333887731999866
 SphereCollider:
   m_ObjectHideFlags: 0

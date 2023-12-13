@@ -984,35 +984,42 @@ MonoBehaviour:
     - name: Max life Increase
       itemObject: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
       itemIconPrefab: {fileID: 1130042488011640330, guid: 99d9651c7d0c3db47aeaaa1fb61250dd, type: 3}
-      itemDescription: Increasse de maximum health
+      itemDescription: Increasse de maximum health( Will replace the current modulel)
     - name: Vampirism
       itemObject: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
       itemIconPrefab: {fileID: 6108425867204405638, guid: 2b67617047331464a97b944efac7aac0, type: 3}
-      itemDescription: ' Enemies have a chance to drop health when die'
+      itemDescription: ' Enemies have a chance to drop health when die (Will replace
+        the current module)'
+    - name: LevelHeal
+      itemObject: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+      itemIconPrefab: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+      itemDescription: Heals all life in next level (Will replace the current module)
   - name: ModulosDeCorpo
     items:
     - name: Collar
       itemObject: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
       itemIconPrefab: {fileID: 3518994718411969595, guid: 1c8e9ca6877094ec995c7fbd2b489d9c, type: 3}
-      itemDescription: Increase virus Speed
+      itemDescription: Increase virus Speed (Addtiona Modulel)
     - name: Low Body
       itemObject: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
       itemIconPrefab: {fileID: 5252605515335492214, guid: 6de493aee88784f7ebdab5756b64e017, type: 3}
-      itemDescription: Deacrease Virus Size in 25% but bullets has less range
+      itemDescription: 'Deacrease Virus Size in 25% but bullets has less range (Will
+        replace the current module) '
   - name: ModulosDeTIro
     items:
     - name: Reload Module
       itemObject: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
       itemIconPrefab: {fileID: 2376230180805813561, guid: 3eabe93e9769546fc9581f2616cae3b0, type: 3}
-      itemDescription: Decrease gun reload time
+      itemDescription: Decrease gun reload time (Addtional Module)
     - name: ShotGun
       itemObject: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
       itemIconPrefab: {fileID: 1636265506237146782, guid: ed11f0e90c56b0f4baa65415f5d21c9b, type: 3}
-      itemDescription: high damage and short range
+      itemDescription: high damage and short range (Will replace the current module)
     - name: MachineGun
       itemObject: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
       itemIconPrefab: {fileID: 6751233284191879135, guid: 1c4c7d075785a024db4d68b55691ee6e, type: 3}
-      itemDescription: ' lots of bullets, high firerate but takes longer to reload'
+      itemDescription: ' lots of bullets, high firerate but takes longer to reload
+        (Will replace the current module)'
 --- !u!82 &1427161987017134397
 AudioSource:
   m_ObjectHideFlags: 0

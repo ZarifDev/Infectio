@@ -156,7 +156,6 @@ RectTransform:
   - {fileID: 1769822485}
   - {fileID: 1122324363}
   - {fileID: 815293001}
-  - {fileID: 1077243796}
   m_Father: {fileID: 1579007283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1780,8 +1779,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ART\n\nEvans Decleve, Lucas de Souza, Raphael Chr\xEDstian e Zarif Elizi\xE1rio\r\n\nCODE\n\nFlavia
-    Myrts, Gustavo Bacelar e Zarif Elizi\xE1rio\r\n\nGAME DESIGN\n\nZarif Elizi\xE1rio\r\n\n\n"
+  m_text: "-ART-\n\nEvans Decleve, Lucas de Souza, Raphael Chr\xEDstian e Zarif Elizi\xE1rio\r\n\n-CODE-\n\nFlavia
+    Myrts, Gustavo Bacelar e Zarif Elizi\xE1rio\r\n\n-GAME DESIGN-\n\nZarif Elizi\xE1rio\r\n\n-SPECIAL
+    THANKS-\n\nLuis Felipe Matsya, Artur Martins Mol \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37f93ae9a2550094fae66458c661c1aa, type: 2}
   m_sharedMaterial: {fileID: 8095830392670645261, guid: 37f93ae9a2550094fae66458c661c1aa, type: 2}
@@ -2193,11 +2193,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 109662866}
-  m_Father: {fileID: 14599848}
+  m_Father: {fileID: 1579007283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -360.12, y: -230}
+  m_AnchoredPosition: {x: -510.05475, y: 246.03766}
   m_SizeDelta: {x: 307.828, y: 131.546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077243797
@@ -2256,6 +2256,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1691095733}
+        m_TargetAssemblyTypeName: Menuprincipal, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1077243798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3088,6 +3100,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1049338551}
+  - {fileID: 1077243796}
   - {fileID: 14599848}
   m_Father: {fileID: 785335707}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3305,6 +3318,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641584219}
   m_CullTransparentMesh: 1
+--- !u!1 &1691095733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5915148069652884588, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+  m_PrefabInstance: {fileID: 1859795318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1756319015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,6 +3658,41 @@ PrefabInstance:
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[0].itemDescription
+      value: Increasse de maximum health( Will replace the current modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[1].itemDescription
+      value: ' Enemies have a chance to drop health when die (Will replace the current
+        module)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemDescription
+      value: Heals all life in next level (Will replace the current module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[0].itemDescription
+      value: Increase virus Speed (Addtiona Modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[1].itemDescription
+      value: 'Deacrease Virus Size in 25% but bullets has less range (Will replace
+        the current module) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[0].itemDescription
+      value: Decrease gun reload time (Addtional Module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[1].itemDescription
+      value: high damage and short range ()
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[2].itemDescription
+      value: ' lots of bullets, high firerate but takes longer to reload (Will replace
+        the current module)'
       objectReference: {fileID: 0}
     - target: {fileID: 5915148069652884588, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: m_Name
@@ -4202,7 +4255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399, y: 518}
+  m_AnchoredPosition: {x: -399, y: 448}
   m_SizeDelta: {x: 1920, y: 1079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050939549

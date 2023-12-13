@@ -19,8 +19,11 @@ public class FirstBoss : MonoBehaviour
   public GameObject BulletAttackPattern2;
   public GameObject BulletAttackPattern3;
   public ParticleSystem hitFlash;
+   public GameObject blood;
   Transform player;
   bool canStartAttacking;
+  public AudioClip epicSound;
+  public AudioClip nextLevel;
   void Start()
   {
     currentLife = maxLife;
@@ -28,7 +31,7 @@ public class FirstBoss : MonoBehaviour
     lifeSlider.maxValue = maxLife;
     lifeSlider.value = maxLife;
     player = GameObject.FindGameObjectWithTag("Player").transform;
-    
+    Player.instance.PlaySound(epicSound);
   
   }
   void Update()
@@ -93,8 +96,10 @@ public class FirstBoss : MonoBehaviour
     }
     void Die()
     {
+       Player.instance.PlaySound(nextLevel);
        lifeSlider.gameObject.SetActive(false);
       Destroy(this.gameObject);
+      Instantiate(blood,transform.position,Quaternion.identity);
     }
     
 }

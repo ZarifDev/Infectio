@@ -6,7 +6,7 @@ public class MovimentoLinear : MonoBehaviour
 {
     // Start is called before the first frame update
     public float velocidadedoadversario = 3;
-     float centroDaTelaOffset = 4; 
+    public float centroDaTelaOffset = 4; 
      private void Start() {
         transform.position = new Vector3(transform.position.x+ Random.Range(0,3),transform.position.y,transform.position.z);
         centroDaTelaOffset = Random.Range(centroDaTelaOffset,centroDaTelaOffset+2);

@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     bool isInvencible;
     public AudioClip playerHit;
     public AudioClip playerHeal;
+     public ParticleSystem hitFlash;
     public static Player instance;
     public ParticleSystem muzzleFlash;
     ModuleMananger moduleMananger;
@@ -111,24 +112,34 @@ public class Player : MonoBehaviour
       
       if(algum_objeto.gameObject.tag == "Inimigo" && !isInvencible)
       {
+         hitParticle(algum_objeto.contacts[0].point);
         TakeDamage(1);
+     
       }
     }
-        
+        void hitParticle(Vector3 pos)
+        {
+          if(!isInvencible ){
+           hitFlash.transform.position = pos;
+            hitFlash.Play();
+        }
+        }
         void OnTriggerEnter(Collider other)
         {
           if(other.gameObject.tag == "Bala")
           {
+              hitParticle(other.ClosestPoint(transform.position));
             TakeDamage(1);
             Destroy(other.gameObject);
-              
+          
           }
           
           if(other.gameObject.tag == "BossBullet")
           {
+             hitParticle(other.ClosestPoint(transform.position));
             TakeDamage(2);
             Destroy(other.gameObject);
-              
+           
           }
         }
     

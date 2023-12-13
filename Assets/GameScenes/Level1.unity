@@ -205,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 714936274263437907, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 714936274263437907, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 714936274263437907, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -252,9 +252,17 @@ PrefabInstance:
       value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 2706341635465325798, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: playerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: eb9656cba180287459b4a757d562b427, type: 3}
+    - target: {fileID: 2706341635465325798, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: lifeSlider
       value: 
       objectReference: {fileID: 2026650705}
+    - target: {fileID: 3459030833631895038, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.554
+      objectReference: {fileID: 0}
     - target: {fileID: 3770882598261264220, guid: 14d651a8fa630b1419a757d7ec74137d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6210,6 +6218,7 @@ MonoBehaviour:
   score: {fileID: 2072645966}
   VictoryMenu: {fileID: 924783303}
   ScoreUp: {fileID: 1748374814}
+  Settings: {fileID: 1676820294}
   paused: 0
 --- !u!1001 &1731511975787710056
 PrefabInstance:
@@ -6219,14 +6228,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 56194658913447105, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 456308447588217314, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 970871201562708429, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6235,30 +6236,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1170170538396534897, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 1757289217853086238, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 1578763572064982746, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1843820056300214857, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 2217163279586273238, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
+    - target: {fileID: 1578763572064982746, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578763572064982746, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260546553554174095, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260546553554174095, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2590507264944455569, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2122860032}
-    - target: {fileID: 2916871164627462272, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 2944237644577938822, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6267,6 +6268,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2122860032}
+    - target: {fileID: 3241594429802696863, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_Text
+      value: dna
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241594429802696863, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241594429802696863, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4317697639881952362, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_Name
       value: LevelCanvas
@@ -6359,34 +6372,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 4630897881714066152, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630897881714066152, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680289962501286168, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4701564436486336541, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_ReferencePixelsPerUnit
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4855689383865746272, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 397204451}
-    - target: {fileID: 5953383462915518564, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 141.20001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953383462915518564, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 15.872009
-      objectReference: {fileID: 0}
     - target: {fileID: 6619807414079961776, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6399,58 +6388,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2122860032}
-    - target: {fileID: 7522984079173345854, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 7617265259519643610, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7662587197235176735, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: scoreUp
       value: 
       objectReference: {fileID: 1748374814}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1676820294}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8311474812912492173, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8386819730416029889, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 8638118815857198601, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 8795681816852178863, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
-    - target: {fileID: 9093357815189760025, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8e557e3f2438364ca0acef807b3ba29, type: 3}
     - target: {fileID: 9094003917056710217, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6460,63 +6401,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebd41513bab2dab479aa6b85c77b1222, type: 3}
---- !u!1001 &2834126674904313796
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136297073203907459, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8034581539490904395, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
-      propertyPath: m_Name
-      value: HitFlash
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6c51a8b6aeb899e4c94c58819061ff0a, type: 3}
 --- !u!1001 &5084542711558020213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6541,6 +6425,41 @@ PrefabInstance:
       propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemIconPrefab
       value: 
       objectReference: {fileID: 1435379103409717633, guid: 2d26f0f39da269748913cb6a3f4679bf, type: 3}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[0].itemDescription
+      value: Increasse de maximum health( Will replace the current modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[1].itemDescription
+      value: ' Enemies have a chance to drop health when die (Will replace the current
+        module)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemDescription
+      value: Heals all life in next level (Will replace the current module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[0].itemDescription
+      value: Increase virus Speed (Addtiona Modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[1].itemDescription
+      value: 'Deacrease Virus Size in 25% but bullets has less range (Will replace
+        the current module) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[0].itemDescription
+      value: Decrease gun reload time (Addtional Module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[1].itemDescription
+      value: high damage and short range ()
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[2].itemDescription
+      value: ' lots of bullets, high firerate but takes longer to reload (Will replace
+        the current module)'
+      objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.data[1].itemDescription
       value: Heals all life in next level
@@ -6671,4 +6590,3 @@ SceneRoots:
   - {fileID: 5925002098097718848}
   - {fileID: 5084542711558020213}
   - {fileID: 199641892}
-  - {fileID: 2834126674904313796}

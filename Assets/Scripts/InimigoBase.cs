@@ -11,6 +11,7 @@ public class InimigoBase : MonoBehaviour
     public GameObject vidaPrefab; // refer. ao ao prefab do item de vida
     public static bool chanceDeDroparVida = false;
     public ParticleSystem hitFlash;
+    public GameObject blood;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class InimigoBase : MonoBehaviour
     public void morrer()
     {
         Player.instance.PlaySound(deathSound);
+            Instantiate(blood,transform.position,Quaternion.identity);
         if (DeveDroparVida() && chanceDeDroparVida)
         {
             
@@ -47,6 +49,7 @@ public class InimigoBase : MonoBehaviour
          if(LevelSpawner.enemiesActiveInScene.Count <1){
             Score.instance.AddScore(1500);
             }
+    
         Destroy(gameObject);
     }
 

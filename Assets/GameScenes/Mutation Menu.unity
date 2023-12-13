@@ -1853,6 +1853,41 @@ PrefabInstance:
       propertyPath: AllUnlockedGameItems.Array.data[0].items.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[0].itemDescription
+      value: Increasse de maximum health( Will replace the current modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[1].itemDescription
+      value: ' Enemies have a chance to drop health when die (Will replace the current
+        module)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[0].items.Array.data[2].itemDescription
+      value: Heals all life in next level (Will replace the current module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[0].itemDescription
+      value: Increase virus Speed (Addtiona Modulel)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[1].items.Array.data[1].itemDescription
+      value: 'Deacrease Virus Size in 25% but bullets has less range (Will replace
+        the current module) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[0].itemDescription
+      value: Decrease gun reload time (Addtional Module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[1].itemDescription
+      value: high damage and short range (Will replace the current module)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
+      propertyPath: AllGameItems.Array.data[2].items.Array.data[2].itemDescription
+      value: ' lots of bullets, high firerate but takes longer to reload (Will replace
+        the current module)'
+      objectReference: {fileID: 0}
     - target: {fileID: 5915148069652884588, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: m_Name
       value: GameData
@@ -1936,6 +1971,7 @@ MonoBehaviour:
   score: {fileID: 0}
   VictoryMenu: {fileID: 0}
   ScoreUp: {fileID: 0}
+  Settings: {fileID: 0}
   paused: 0
 --- !u!4 &950468247
 Transform:
@@ -4460,9 +4496,9 @@ MonoBehaviour:
   selectAnimElapsedTime: 0
   canSelectModules: 1
   audioSource: {fileID: 0}
-  changeSelection: {fileID: 8300000, guid: eadf13c23adbbc442b90e2043d6afc35, type: 3}
-  nullSelection: {fileID: 8300000, guid: f64957d0369d16844bb06957cf318ff7, type: 3}
-  select: {fileID: 8300000, guid: 93bebcc962018a1438078bf44803e944, type: 3}
+  changeSelection: {fileID: 8300000, guid: 43394d377d892cb4ba9508bafb9fd56d, type: 3}
+  nullSelection: {fileID: 8300000, guid: 25e0c01ce7992e348a8d82eaa4e85834, type: 3}
+  select: {fileID: 8300000, guid: 8089bac3e61c706479303fb901e91b07, type: 3}
   selectLocked: {fileID: 8300000, guid: a54879ff415598143b974c0815c39a8a, type: 3}
 --- !u!82 &1688210372
 AudioSource:
