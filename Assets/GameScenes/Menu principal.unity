@@ -3674,7 +3674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[1].items.Array.data[0].itemDescription
-      value: Increase virus Speed (Addtiona Modulel)
+      value: Increase virus Speed (Stackable)
       objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[1].items.Array.data[1].itemDescription
@@ -3683,11 +3683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[2].items.Array.data[0].itemDescription
-      value: Decrease gun reload time (Addtional Module)
+      value: Decrease gun reload time (Stackable)
       objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[2].items.Array.data[1].itemDescription
-      value: high damage and short range ()
+      value: high damage and short range (Will replace the current module)
       objectReference: {fileID: 0}
     - target: {fileID: 2919058456821161829, guid: 2537b8214ae5fca409c920597650ce9a, type: 3}
       propertyPath: AllGameItems.Array.data[2].items.Array.data[2].itemDescription

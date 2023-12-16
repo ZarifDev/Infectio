@@ -39,10 +39,10 @@ public class InimigoBase : MonoBehaviour
     public void morrer()
     {
         Player.instance.PlaySound(deathSound);
-            Instantiate(blood,transform.position,Quaternion.identity);
-        if (DeveDroparVida() && chanceDeDroparVida)
+        Instantiate(blood,transform.position,Quaternion.identity);
+        if (DeveDroparVida() == true && chanceDeDroparVida&& Player.instance.vidaAtual <Player.instance.vidaMaxima)
         {
-            
+
             Instantiate(vidaPrefab, transform.position, Quaternion.identity); // instancia o item de vida na posi��o do inimigo
         }
         LevelSpawner.enemiesActiveInScene.Remove(gameObject);
